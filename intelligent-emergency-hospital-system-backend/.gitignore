@@ -1,0 +1,12 @@
+logs/*
+!.gitkeep
+node_modules/
+app/lib/
+tmp
+.DS_Store
+.idea
+
+src/main/java/resources/static/dist/
+src/main/java/resources/static/src/components/
+src/main/java/resources/static/node_modules/
+target/

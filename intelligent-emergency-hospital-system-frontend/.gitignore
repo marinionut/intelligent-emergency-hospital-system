@@ -1,0 +1,8 @@
+.idea/
+dist/
+node_modules/
+src/components/
+intelligent-emergency-hospital-system-frontend/dist/
+intelligent-emergency-hospital-system-frontend/node_modules/
+intelligent-emergency-hospital-system-frontend/src/components
+intelligent-emergency-hospital-system-backend/target
