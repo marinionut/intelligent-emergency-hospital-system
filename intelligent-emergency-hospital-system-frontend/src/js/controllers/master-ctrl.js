@@ -88,7 +88,7 @@ function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, AuthService
         }  else if(next.name === 'room') {
             $scope.pageName = "Camere";
         } else if(next.name === 'appointment') {
-            $scope.pageName = "Programari";
+            $scope.pageName = "Internari";
         } else {
             $scope.pageName = "";
         }

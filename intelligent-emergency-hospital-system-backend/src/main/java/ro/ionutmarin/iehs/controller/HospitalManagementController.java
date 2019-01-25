@@ -155,4 +155,14 @@ public class HospitalManagementController {
         return alertDao.findAll();
     }
 
+    @RequestMapping(value = "/appointment/delete", method = RequestMethod.DELETE)
+    public ResponseEntity deleteAppointment(@RequestParam("id") int id) {
+        try {
+            appointmentDao.delete(id);
+            return  ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
 }

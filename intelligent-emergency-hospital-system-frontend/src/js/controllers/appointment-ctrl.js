@@ -8,8 +8,6 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, leaf
     $scope.rooms = [];
     $scope.patients = [];
     $scope.failMessage = "";
-    $scope.appointmentsFull = [];
-
 
     $scope.getDoctor = function (id) {
         $http({
@@ -65,14 +63,8 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, leaf
         $http({method: 'GET', url: 'http://localhost:8081/api/appointment/all'}).then(function (response) {
             $scope.appointments = response.data;
         });
-        //TODO
-        for(var i=0;i<$scope.appointments.length;i++) {
-            $scope.appointmentsFull[i].doctor = $scope.getDoctor($scope.appointments[i].doctorId);
-            $scope.appointmentsFull[i].patient = $scope.getPatient($scope.appointments[i].patientId);
-            $scope.appointmentsFull[i].room = $scope.getRoom($scope.appointments[i].roomId);
-        }
-
     };
+
     $scope.getAppointments();
 
 
@@ -88,7 +80,7 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, leaf
             id: 0,
             doctorId: $scope.inputDoctor,
             patientId: $scope.inputPatient,
-            roomId: $scope.inputRoom,
+            roomId: $scope.inputRoom
         };
 
         // alert(newVM.vmName + " " + newVM.zone + " " + newVM.image);
@@ -106,6 +98,7 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, leaf
                 $scope.inputDoctor = "";
                 $scope.inputPatient = "";
                 $scope.inputRoom = "";
+                $scope.getAppointments();
             } else if (response.status == 500) {
                 $scope.failMessage = response.data;
                 window.alert($scope.failMessage);
@@ -114,5 +107,15 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, leaf
         });
 
         $scope.getAppointments();
+    };
+
+    $scope.deleteAppointment = function (id) {
+        $http({
+            method: 'DELETE',
+            url: 'http://localhost:8081/api/appointment/delete?id=' + id
+        }).then(function (response) {
+            $scope.getAppointments();
+        });
+
     };
 }

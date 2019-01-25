@@ -1,5 +1,6 @@
 package ro.ionutmarin.iehs.entity;
 
+import com.twilio.rest.video.v1.Room;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,6 +33,17 @@ public class AppointmentEntity {
     @Column(name = "doctor_id")
     private int doctorId;
 
+    @JoinColumn(name = "patient_id", updatable=false, insertable=false)
+    @OneToOne(targetEntity = PatientEntity.class, fetch = FetchType.EAGER)
+    private PatientEntity patient;
+
+    @JoinColumn(name = "room_id", updatable=false, insertable=false)
+    @OneToOne(targetEntity = RoomEntity.class, fetch = FetchType.EAGER)
+    private RoomEntity room;
+
+    @JoinColumn(name = "doctor_id", updatable=false, insertable=false)
+    @OneToOne(targetEntity = DoctorEntity.class, fetch = FetchType.EAGER)
+    private DoctorEntity doctor;
 
     public int getId() {
         return id;
@@ -63,5 +75,29 @@ public class AppointmentEntity {
 
     public void setDoctorId(int doctorId) {
         this.doctorId = doctorId;
+    }
+
+    public PatientEntity getPatient() {
+        return patient;
+    }
+
+    public void setPatient(PatientEntity patient) {
+        this.patient = patient;
+    }
+
+    public RoomEntity getRoom() {
+        return room;
+    }
+
+    public void setRoom(RoomEntity room) {
+        this.room = room;
+    }
+
+    public DoctorEntity getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(DoctorEntity doctor) {
+        this.doctor = doctor;
     }
 }

@@ -37,31 +37,81 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/appointment-ctrl.js">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/appointment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/AlertController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/appointment.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="9" column="22" selection-start-line="6" selection-start-column="16" selection-end-line="9" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/doctor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/familie.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/patient.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/room.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/users.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/alerts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1548415337730" expanded="true" signature="880:1382" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,77 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/HospitalManagementController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#964#965#0" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1812#1813#0" expanded="true" />
-                <element signature="e#1855#1856#0" expanded="true" />
-                <element signature="e#3038#3039#0" expanded="true" />
-                <element signature="e#3078#3079#0" expanded="true" />
-                <element signature="e#3198#3199#0" expanded="true" />
-                <element signature="e#3882#3883#0" expanded="true" />
-                <element signature="e#3929#3930#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/PatientDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/PatientDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/AlertSenderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="79">
+              <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -185,9 +166,9 @@
       <find>patient</find>
       <find>/patient&quot;</find>
       <find>appointment/all</find>
-      <find>/patient</find>
       <find>$scope.getAppointments()</find>
       <find>$scope.appointments</find>
+      <find>/patient</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Git projects\intelligent-emergency-hospital-system\intelligent-emergency-hospital-system-backend\src</dir>
@@ -200,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/config/HibernateConfiguration.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/RestApiServletConfig.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/pom.xml" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/TestController.java" />
@@ -214,10 +194,7 @@
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/services/alert-service.js" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/DoctorEntity.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/DoctorStuffEntity.java" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AppointmentDao.java" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AppointmentDaoImpl.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/doctors.html" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/AppointmentEntity.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/DoctorDao.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/DoctorDaoImpl.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/room.html" />
@@ -232,25 +209,29 @@
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/patient-ctrl.js" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/users-ctrl.js" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/doctor-ctrl.js" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/doctor.html" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/room.html" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/room-ctrl.js" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AlertDao.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AlertDaoImpl.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/AlertController.java" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/patient.html" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/appointment.html" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/AlertSenderController.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/AlertEntity.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/routes.js" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/master-ctrl.js" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/alerts.html" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/app.js" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/dashboard-ctrl.js" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/AppointmentEntity.java" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/master-ctrl.js" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/HospitalManagementController.java" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/index.html" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AppointmentDao.java" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AppointmentDaoImpl.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/appointment-ctrl.js" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/index.html" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/doctor.html" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/patient.html" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/room.html" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/users.html" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/appointment.html" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/alerts.html" />
       </list>
     </option>
   </component>
@@ -286,7 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,16 +348,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="iehs" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iehs" type="462c0819:PsiDirectoryNode" />
               <item name="sms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -441,7 +412,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -452,7 +423,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548386659595" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548415339188" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/node_modules/gulp" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -489,7 +460,7 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.014694509" />
+    <option name="contentProportion" value="0.102009274" />
   </component>
   <component name="RunManager" selected="Spring Boot.GclientApplication">
     <configuration default="true" type="Applet">
@@ -615,18 +586,19 @@
       <workItem from="1548107744520" duration="4739000" />
       <workItem from="1548184715085" duration="8802000" />
       <workItem from="1548269530733" duration="19504000" />
-      <workItem from="1548340214899" duration="39845000" />
+      <workItem from="1548340214899" duration="40150000" />
+      <workItem from="1548412530231" duration="2741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72890000" />
+    <option name="totallyTimeSpent" value="75936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978261" visible="true" weight="0.34493193" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978261" visible="true" weight="0.2375189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -643,14 +615,14 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3010204" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21258503" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.48129252" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32993197" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.5867347" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.542517" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -691,15 +663,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/HospitalManagementController.java</url>
-          <line>139</line>
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>appointmentDao.findAll()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ppointmentDao.findAll()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>roomDao.findById(id)</expression-string>
         <language-id>JAVA</language-id>
@@ -738,47 +720,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>appointmentDao.findAll()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>patientDao.findAll()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/DoctorEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/DoctorDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" column="5" selection-start-line="26" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/DoctorDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AbstractDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -838,6 +782,147 @@
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/register.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.1.3.RELEASE/spring-messaging-5.1.3.RELEASE.jar!/org/springframework/messaging/Message.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/model/HelloMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/sms/SmsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/familie-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/alert-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/AlertEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1512#1513#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1743#1744#0" expanded="true" />
+            <element signature="e#1775#1776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/patient-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="25" selection-start-line="4" selection-start-column="2" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/room-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-start-line="4" selection-start-column="3" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/users-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/dashboard-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="142" column="11" selection-start-line="137" selection-start-column="8" selection-end-line="142" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/ComputeController.java" />
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/AlertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/PatientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/PatientDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/AlertSenderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/PatientEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -878,144 +963,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/room.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="45" column="111" selection-start-line="45" selection-start-column="111" selection-end-line="45" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/AppointmentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="270">
+          <caret line="44" column="73" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AppointmentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AppointmentDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AlertDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.1.3.RELEASE/spring-messaging-5.1.3.RELEASE.jar!/org/springframework/messaging/Message.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/model/HelloMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="52" column="6" selection-start-line="31" selection-end-line="52" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/patient.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="42" column="146" selection-start-line="42" selection-start-column="146" selection-end-line="42" selection-end-column="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/sms/SmsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/familie-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/familie.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/doctor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="59" column="53" selection-end-line="65" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/alert-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AlertDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/AlertEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-            <element signature="e#1544#1545#0" expanded="true" />
-            <element signature="e#1597#1598#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1700#1701#0" expanded="true" />
-            <element signature="e#1743#1744#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1802#1803#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
+            <element signature="e#1875#1876#0" expanded="true" />
+            <element signature="e#1902#1903#0" expanded="true" />
+            <element signature="e#1946#1947#0" expanded="true" />
+            <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2046#2047#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2132#2133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1027,51 +992,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/master-ctrl.js">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+        <state relative-caret-position="-514">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/alerts.html">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/master-ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+        <state relative-caret-position="98">
+          <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/HospitalManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
-            <marker date="1548381279531" expanded="true" signature="853:1355" ph="..." />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4313#4314#0" expanded="true" />
+            <element signature="e#4360#4361#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/app.js">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AlertDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/patient-ctrl.js">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/DoctorDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" selection-start-line="4" selection-start-column="2" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="136">
+          <caret line="11" column="34" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/room-ctrl.js">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AlertDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="22" selection-start-line="4" selection-start-column="3" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AppointmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/DoctorDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="35" column="21" selection-start-line="26" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AppointmentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/doctor-ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="60" column="6" selection-start-line="22" selection-start-column="3" selection-end-line="60" selection-end-column="6" />
+        <state relative-caret-position="374">
+          <caret line="70" column="6" selection-start-line="62" selection-start-column="4" selection-end-line="70" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/appointment-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="114" column="54" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1082,115 +1106,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/users-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/dashboard-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="142" column="11" selection-start-line="137" selection-start-column="8" selection-end-line="142" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/ComputeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/AlertController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/AlertSenderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/doctor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/PatientDao.java">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/familie.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/patient.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="204">
+          <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/PatientDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/room.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="95">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/HospitalManagementController.java">
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/users.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1812#1813#0" expanded="true" />
-            <element signature="e#1855#1856#0" expanded="true" />
-            <element signature="e#3038#3039#0" expanded="true" />
-            <element signature="e#3078#3079#0" expanded="true" />
-            <element signature="e#3198#3199#0" expanded="true" />
-            <element signature="e#3882#3883#0" expanded="true" />
-            <element signature="e#3929#3930#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/appointment-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="187">
+          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/appointment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        <state relative-caret-position="17">
+          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/alerts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1548415337730" expanded="true" signature="880:1382" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
