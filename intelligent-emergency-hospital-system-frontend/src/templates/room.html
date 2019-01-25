@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<div ng-controller="RoomCtrl" class="container" style="padding:10px 10px;">
+    <div class="container" style="padding:10px 10px;">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"></legend>
+            <form class="form-inline" ng-hide="hideAdd()">
+                <div class="form-group">
+                    <label for="inputRoomNumber">Numar</label>
+                    <input type="text" class="form-control" id="inputRoomNumber" ng-model="inputRoomNumber" placeholder="numar" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputRoomDescription">Descriere</label>
+                    <input type="text" class="form-control" id="inputRoomDescription" ng-model="inputRoomDescription" placeholder="descriere" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputRoomBedNumber">Numar de paturi</label>
+                    <input type="text" class="form-control" id="inputRoomBedNumber" ng-model="inputRoomBedNumber" placeholder="numar de paturi" required />
+                </div>
+
+                <button type="button" class="btn btn-primary" ng-click="addRoom()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga camera</button>
+            </form>
+        </fieldset>
+    </div>
+    <div class="container" style="padding:10px 10px;">
+        <table class="table table-bordered" id="tbl_employees">
+            <thead>
+            <tr>
+                <th>#</th>
+                <!--<th>Id</th>-->
+                <th>Numar</th>
+                <th>Descriere</th>
+                <th>Numar paturi</th>
+                <th>Actiuni</th>
+            </tr>
+            </thead>
+            <tbody id="tbl_posts_body">
+            <tr ng-repeat="r in rooms">
+                <td><span class="sn">{{$index + 1}}</span>.</td>
+                <!--<td>{{doc.id}}</td>-->
+                <td>{{r.number}}</td>
+                <td>{{r.description}}</td>
+                <td>{{r.bedNumber}}</td>
+                <td ng-hide="hideAllActions()">
+                    <button type="button" class="btn-xs btn-danger" ng-click="deleteRoom(r.id)" ng-hide="hideDelete()">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

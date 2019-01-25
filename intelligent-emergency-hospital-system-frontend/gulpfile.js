@@ -48,7 +48,7 @@ gulp.task('usemin', function() {
             js: [minifyJs(), 'concat'],
             css: [minifyCss({keepSpecialComments: 0}), 'concat'],
         }))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('dist/'))
 });
 
 /**
@@ -276,5 +276,5 @@ gulp.task('livereload', function() {
  * Gulp tasks
  */
 gulp.task('build', ['usemin', 'build-assets', 'build-custom']);
-gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);
-gulp.task('dev', ['build', 'express', 'watch', 'livereload']);
+gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('dev', ['webserver', 'watch']);

@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@bower_components/AlertifyJS@MohammadYounes/AlertifyJS#^1.11.2":
+  version "1.11.2"
+  resolved "https://codeload.github.com/MohammadYounes/AlertifyJS/tar.gz/5517b36145241248a0a6fb28598299271a820cbb"
+
 "@bower_components/angular-animate@angular/bower-angular-animate#^1.6.2":
   version "1.7.6"
   resolved "https://codeload.github.com/angular/bower-angular-animate/tar.gz/e6b6ca95acf2f339172aff6130bafd26b658762a"

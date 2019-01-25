@@ -39,6 +39,9 @@ public class DoctorStuffEntity {
     @Column(name = "type")
     private String type;
 
+    @Column(name = "doctor_id")
+    private String doctorId;
+
     public int getId() {
         return id;
     }
@@ -85,5 +88,13 @@ public class DoctorStuffEntity {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getDoctorId() {
+        return doctorId;
+    }
+
+    public void setDoctorId(String doctorId) {
+        this.doctorId = doctorId;
     }
 }

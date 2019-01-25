@@ -1,6 +1,7 @@
 package ro.ionutmarin.iehs.dao;
 
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import ro.ionutmarin.iehs.entity.PatientEntity;
 import ro.ionutmarin.iehs.entity.RoomEntity;
@@ -23,4 +24,15 @@ public class PatientDaoImpl  extends AbstractDao implements PatientDao {
         return (List<PatientEntity>) criteria.list();
     }
 
+    @Override
+    public void delete(int id) {
+        getSession().delete(findById(id));
+    }
+
+    @Override
+    public PatientEntity findById(int id) {
+        PatientEntity patientEntity = (PatientEntity) getSession().createCriteria(PatientEntity.class)
+                .add(Restrictions.eq("id", id)).uniqueResult();
+        return patientEntity;
+    }
 }

@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<div ng-controller="DoctorCtrl" class="container" style="padding:10px 10px;">
+    <div class="container" style="padding:10px 10px;">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"></legend>
+            <form class="form-inline" ng-hide="hideAdd()">
+                <div class="form-group">
+                    <label for="inputDoctorFirstName">Nume</label>
+                    <input type="text" class="form-control" id="inputDoctorFirstName" ng-model="inputDoctorFirstName" placeholder="first name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputDoctorLastName">Prenume</label>
+                    <input type="text" class="form-control" id="inputDoctorLastName" ng-model="inputDoctorLastName" placeholder="last name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputDoctorEmail">Email</label>
+                    <input type="text" class="form-control" id="inputDoctorEmail" ng-model="inputDoctorEmail" placeholder="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputDoctorTelefon">Telefon</label>
+                    <input type="text" class="form-control" id="inputDoctorTelefon" ng-model="inputDoctorTelefon" placeholder="phone" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputDoctorSpecializare">Specializare</label>
+                    <input type="text" class="form-control" id="inputDoctorSpecializare" ng-model="inputDoctorSpecializare" placeholder="specialization" required />
+                </div>
+
+                <button type="button" class="btn btn-primary" ng-click="addDoctor()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga doctor</button>
+            </form>
+        </fieldset>
+    </div>
+    <div class="container" style="padding:10px 10px;">
+        <table class="table table-bordered" id="tbl_employees">
+            <thead>
+            <tr>
+                <th>#</th>
+                <!--<th>Id</th>-->
+                <th>Nume</th>
+                <th>Prenume</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Specializare</th>
+                <th>Actiuni</th>
+            </tr>
+            </thead>
+            <tbody id="tbl_posts_body">
+            <tr ng-repeat="doc in doctors">
+                <td><span class="sn">{{$index + 1}}</span>.</td>
+                <!--<td>{{doc.id}}</td>-->
+                <td>{{doc.firstName}}</td>
+                <td>{{doc.lastName}}</td>
+                <td>{{doc.email}}</td>
+                <td>{{doc.phoneNumber}}</td>
+                <td>{{doc.specialization}}</td>
+                <td ng-hide="hideAllActions()">
+                    <button type="button" class="btn-xs btn-danger" ng-click="deleteDoctor(doc.id)" ng-hide="hideDelete()">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

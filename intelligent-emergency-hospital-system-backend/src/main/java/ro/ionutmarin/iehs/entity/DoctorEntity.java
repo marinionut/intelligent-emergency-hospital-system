@@ -39,10 +39,6 @@ public class DoctorEntity {
         @Column(name = "specialization")
         private String specialization;
 
-        @ManyToOne
-        @JoinColumn(name="doctor_id")
-        private DoctorStuffEntity doctorStuffEntity;
-
         public int getId() {
                 return id;
         }
@@ -89,13 +85,5 @@ public class DoctorEntity {
 
         public void setSpecialization(String specialization) {
                 this.specialization = specialization;
-        }
-
-        public DoctorStuffEntity getDoctorStuffEntity() {
-                return doctorStuffEntity;
-        }
-
-        public void setDoctorStuffEntity(DoctorStuffEntity doctorStuffEntity) {
-                this.doctorStuffEntity = doctorStuffEntity;
         }
 }

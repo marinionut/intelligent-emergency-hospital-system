@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<div ng-controller="PatientCtrl" class="container" style="padding:10px 10px;">
+    <div class="container" style="padding:10px 10px;">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"></legend>
+
+            <form class="form-inline" ng-hide="hideAdd()">
+                <div class="form-group">
+                    <label for="inputPatientFirstName">Nume</label>
+                    <input type="text" class="form-control" id="inputPatientFirstName" ng-model="inputPatientFirstName" placeholder="first name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPatientLastName">Prenume</label>
+                    <input type="text" class="form-control" id="inputPatientLastName" ng-model="inputPatientLastName" placeholder="last name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPatientAddress">Adresa</label>
+                    <input type="text" class="form-control" id="inputPatientAddress" ng-model="inputPatientAddress" placeholder="adresa" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPatientPhoneNumber">Telefon</label>
+                    <input type="text" class="form-control" id="inputPatientPhoneNumber" ng-model="inputPatientPhoneNumber" placeholder="phone" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPatientAge">Varsta</label>
+                    <input type="text" class="form-control" id="inputPatientAge" ng-model="inputPatientAge" placeholder="varsta" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPatientCnp">Cnp</label>
+                    <input type="text" class="form-control" id="inputPatientCnp" ng-model="inputPatientCnp" placeholder="cnp" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPatientGender">Gen</label>
+                    <input type="text" class="form-control" id="inputPatientGender" ng-model="inputPatientGender" placeholder="gen" required />
+                </div>
+
+                <button type="button" class="btn btn-primary" ng-click="addPatient()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga pacient</button>
+            </form>
+        </fieldset>
+    </div>
+    <div class="container" style="padding:10px 10px;">
+        <table class="table table-bordered" id="tbl_employees">
+            <thead>
+            <tr>
+                <th>#</th>
+                <!--<th>Id</th>-->
+                <th>Nume</th>
+                <th>Prenume</th>
+                <th>Adresa</th>
+                <th>Telefon</th>
+                <th>Varsta</th>
+                <th>Cnp</th>
+                <th>Gen</th>
+                <th>Actiuni</th>
+            </tr>
+            </thead>
+            <tbody id="tbl_posts_body">
+            <tr ng-repeat="p in patients">
+                <td><span class="sn">{{$index + 1}}</span>.</td>
+                <!--<td>{{doc.id}}</td>-->
+                <td>{{p.firstName}}</td>
+                <td>{{p.lastName}}</td>
+                <td>{{p.address}}</td>
+                <td>{{p.phoneNumber}}</td>
+                <td>{{p.age}}</td>
+                <td>{{p.cnp}}</td>
+                <td>{{p.gender}}</td>
+                <td ng-hide="hideAllActions()">
+                    <button type="button" class="btn-xs btn-danger" ng-click="deletePatient(p.id)">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

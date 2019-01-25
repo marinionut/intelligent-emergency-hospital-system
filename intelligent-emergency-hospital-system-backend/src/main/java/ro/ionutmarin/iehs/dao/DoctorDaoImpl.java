@@ -2,6 +2,7 @@ package ro.ionutmarin.iehs.dao;
 
 
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import ro.ionutmarin.iehs.entity.DoctorEntity;
 
@@ -21,6 +22,18 @@ public class DoctorDaoImpl  extends AbstractDao implements DoctorDao {
     public List<DoctorEntity> findAll() {
         Criteria criteria = getSession().createCriteria(DoctorEntity.class);
         return (List<DoctorEntity>) criteria.list();
+    }
+
+    @Override
+    public void delete(int id) {
+        getSession().delete(findById(id));
+    }
+
+    @Override
+    public DoctorEntity findById(int id) {
+        DoctorEntity doctorEntity = (DoctorEntity) getSession().createCriteria(DoctorEntity.class)
+                .add(Restrictions.eq("id", id)).uniqueResult();
+        return doctorEntity;
     }
 
 }

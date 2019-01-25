@@ -23,14 +23,14 @@ public class RoomEntity {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name")
-    private String name;
-
     @Column(name = "description")
     private String description;
 
     @Column(name = "number")
     private int number;
+
+    @Column(name = "bed_number")
+    private int bedNumber;
 
     public int getId() {
         return id;
@@ -38,14 +38,6 @@ public class RoomEntity {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getDescription() {
@@ -62,5 +54,13 @@ public class RoomEntity {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public int getBedNumber() {
+        return bedNumber;
+    }
+
+    public void setBedNumber(int bedNumber) {
+        this.bedNumber = bedNumber;
     }
 }

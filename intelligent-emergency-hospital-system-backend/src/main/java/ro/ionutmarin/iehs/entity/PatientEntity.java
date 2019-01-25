@@ -25,13 +25,13 @@ public class PatientEntity {
         private int id;
 
         @Column(name = "first_name")
-        private String first_name;
+        private String firstName;
 
         @Column(name = "last_name")
-        private String last_name;
+        private String lastName;
 
         @Column(name = "phone_number")
-        private int phone_number;
+        private String phoneNumber;
 
         @Column(name = "address")
         private String address;
@@ -40,19 +40,10 @@ public class PatientEntity {
         private int age;
 
         @Column(name = "gender")
-        private int gender;
+        private String gender;
 
-        @OneToOne(cascade = CascadeType.ALL)
-        @JoinColumn(name = "doctor_id")
-        private DoctorEntity doctorEntity;
-
-        @OneToOne(cascade = CascadeType.ALL)
-        @JoinColumn(name = "room_id")
-        private RoomEntity roomEntity;
-
-        @OneToOne(cascade = CascadeType.ALL)
-        @JoinColumn(name = "medication_id")
-        private MedicationEntity medicationEntity;
+        @Column(name = "cnp")
+        private long cnp;
 
         public int getId() {
                 return id;
@@ -62,28 +53,28 @@ public class PatientEntity {
                 this.id = id;
         }
 
-        public String getFirst_name() {
-                return first_name;
+        public String getFirstName() {
+                return firstName;
         }
 
-        public void setFirst_name(String first_name) {
-                this.first_name = first_name;
+        public void setFirstName(String firstName) {
+                this.firstName = firstName;
         }
 
-        public String getLast_name() {
-                return last_name;
+        public String getLastName() {
+                return lastName;
         }
 
-        public void setLast_name(String last_name) {
-                this.last_name = last_name;
+        public void setLastName(String lastName) {
+                this.lastName = lastName;
         }
 
-        public int getPhone_number() {
-                return phone_number;
+        public String getPhoneNumber() {
+                return phoneNumber;
         }
 
-        public void setPhone_number(int phone_number) {
-                this.phone_number = phone_number;
+        public void setPhoneNumber(String phoneNumber) {
+                this.phoneNumber = phoneNumber;
         }
 
         public String getAddress() {
@@ -102,35 +93,19 @@ public class PatientEntity {
                 this.age = age;
         }
 
-        public int getGender() {
+        public String getGender() {
                 return gender;
         }
 
-        public void setGender(int gender) {
+        public void setGender(String gender) {
                 this.gender = gender;
         }
 
-        public DoctorEntity getDoctorEntity() {
-                return doctorEntity;
+        public long getCnp() {
+                return cnp;
         }
 
-        public void setDoctorEntity(DoctorEntity doctorEntity) {
-                this.doctorEntity = doctorEntity;
-        }
-
-        public RoomEntity getRoomEntity() {
-                return roomEntity;
-        }
-
-        public void setRoomEntity(RoomEntity roomEntity) {
-                this.roomEntity = roomEntity;
-        }
-
-        public MedicationEntity getMedicationEntity() {
-                return medicationEntity;
-        }
-
-        public void setMedicationEntity(MedicationEntity medicationEntity) {
-                this.medicationEntity = medicationEntity;
+        public void setCnp(long cnp) {
+                this.cnp = cnp;
         }
 }

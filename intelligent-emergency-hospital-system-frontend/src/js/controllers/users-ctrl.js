@@ -7,7 +7,7 @@ function UsersCtrl($scope, $rootScope, $http, $window) {
 
     $scope.failMessage = "";
     $scope.users = [];
-    $scope.roles = ["admin", "partial", "read"];
+    $scope.roles = ["admin", "doctor", "guest"];
     $scope.role = $scope.roles[0];
 
     $scope.getUsers = function() {

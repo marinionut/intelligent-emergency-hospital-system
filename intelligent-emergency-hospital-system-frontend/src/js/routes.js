@@ -20,7 +20,7 @@ angular.module('RDash')
         $stateProvider
             .state('index', {
                 url: '/',
-                templateUrl: 'templates/dashboard.html'
+                templateUrl: 'templates/doctor.html'
             })
             .state('login', {
                 url: '/login',
@@ -30,14 +30,26 @@ angular.module('RDash')
                 url: '/users',
                 templateUrl: 'templates/users.html'
             })
-            .state('familie', {
-                url: '/familie',
-                templateUrl: 'templates/familie.html'
+            .state('alerts', {
+                url: '/alerts',
+                templateUrl: 'templates/alerts.html'
+            })
+            .state('room', {
+                url: '/room',
+                templateUrl: 'templates/room.html'
+            })
+            .state('patient', {
+                url: '/patient',
+                templateUrl: 'templates/patient.html'
+            })
+            .state('appointment', {
+                url: '/appointment',
+                templateUrl: 'templates/appointment.html'
+            })
+            .state('doctor', {
+                url: '/doctor',
+                templateUrl: 'templates/doctor.html'
             });
-            // .state('register', {
-            //     url: '/register',
-            //     templateUrl: 'templates/register.html'
-            // });
     }
 ])
 

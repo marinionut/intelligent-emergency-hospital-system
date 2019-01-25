@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<div ng-controller="AppointmentCtrl" class="container" style="padding:10px 10px;">
+    <div class="container" style="padding:10px 10px;">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"></legend>
+            <form class="form-inline" ng-hide="hideAdd()">
+
+                <div class="form-group">
+                    <label for="inputDoctorId">Doctor</label>
+                    <select id="inputDoctorId" ng-model="inputDoctor" class="form-control" ng-required="true">
+                        <option ng-repeat="d in doctors" >{{d.firstName}} {{d.lastName}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPatientId">Pacient</label>
+                    <select id="inputPatientId" ng-model="inputPatient" class="form-control" ng-required="true">
+                        <option ng-repeat="p in patients" >{{p.firstName}} {{p.lastName}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputRoomId">Camera</label>
+                    <select id="inputRoomId" ng-model="inputRoom" class="form-control" ng-required="true">
+                        <option ng-repeat="r in rooms" >{{r.number}}</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-primary" ng-click="addAppointment()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga internare</button>
+            </form>
+        </fieldset>
+    </div>
+    <div class="container" style="padding:10px 10px;">
+        <table class="table table-bordered" id="tbl_employees">
+            <thead>
+            <tr>
+                <th>#</th>
+                <!--<th>Id</th>-->
+                <th>Doctor</th>
+                <th>Pacient</th>
+                <th>Camera</th>
+                <th>Actiuni</th>
+            </tr>
+            </thead>
+            <tbody id="tbl_posts_body">
+            <tr ng-repeat="app in appointmentsFull">
+                <td><span class="sn">{{$index + 1}}</span>.</td>
+                <!--<td>{{doc.id}}</td>-->
+                <td>{{app.doctor}}</td>
+                <td>{{app.patient}}</td>
+                <td>{{app.room}}</td>
+                <td ng-hide="hideAllActions()">
+                    <button type="button" class="btn-xs btn-danger" ng-click="deleteAppointment(doc.id)" ng-hide="hideDelete()">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

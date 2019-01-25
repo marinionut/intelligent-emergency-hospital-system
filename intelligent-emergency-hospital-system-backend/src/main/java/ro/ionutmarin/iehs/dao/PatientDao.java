@@ -8,4 +8,6 @@ import java.util.List;
 public interface PatientDao {
     void save(PatientEntity patientEntity);
     List<PatientEntity> findAll();
+    void delete(int id);
+    PatientEntity findById(int id);
 }

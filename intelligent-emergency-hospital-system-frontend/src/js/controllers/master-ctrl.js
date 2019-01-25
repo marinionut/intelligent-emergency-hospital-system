@@ -39,6 +39,10 @@ function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, AuthService
 
     $scope.logout = function(){
         AuthService.logout();
+        if ($rootScope.stompClient !== null) {
+            $rootScope.stompClient.disconnect();
+            console.log("disconected from topic.")
+        }
         $rootScope.memberinfo = undefined;
         $state.go('login');
     };
@@ -72,9 +76,19 @@ function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, AuthService
     $scope.pageName = "";
     $rootScope.$on('$stateChangeStart', function (event, next) {
         if(next.name === 'index') {
-            $scope.pageName = "GCloud Console";
+            $scope.pageName = "HospitAlert";
         }  else if(next.name === 'users') {
-            $scope.pageName = "GCloud Console";
+            $scope.pageName = "Utilizatori";
+        }  else if(next.name === 'alerts') {
+            $scope.pageName = "Alerte";
+        }  else if(next.name === 'doctor') {
+            $scope.pageName = "Doctori";
+        }  else if(next.name === 'patient') {
+            $scope.pageName = "Pacienti";
+        }  else if(next.name === 'room') {
+            $scope.pageName = "Camere";
+        } else if(next.name === 'appointment') {
+            $scope.pageName = "Programari";
         } else {
             $scope.pageName = "";
         }
