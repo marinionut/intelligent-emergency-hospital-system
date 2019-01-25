@@ -1,5 +1,5 @@
 # `Hospitalert` — intelligent emergency hospital system
 
-This is server component
+This is client component
 
 

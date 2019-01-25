@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/appointment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -49,19 +49,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="22" selection-start-line="6" selection-start-column="16" selection-end-line="9" selection-end-column="22" />
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="34">
+                <caret line="2" column="24" selection-end-line="5" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/doctor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="85">
+                <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="55" selection-start-column="55" selection-end-column="55" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -103,7 +121,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/alerts.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -112,15 +130,6 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <marker date="1548415337730" expanded="true" signature="880:1382" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -181,9 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/RestApiServletConfig.java" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/pom.xml" />
-        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/TestController.java" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/socket/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/.gitignore" />
@@ -232,6 +238,9 @@
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/users.html" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/appointment.html" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/alerts.html" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/README.md" />
+        <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -275,139 +284,6 @@
               <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iehs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iehs" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iehs" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iehs" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iehs" type="462c0819:PsiDirectoryNode" />
-              <item name="sms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iehs" type="462c0819:PsiDirectoryNode" />
-              <item name="socket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="intelligent-emergency-hospital-system-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -423,7 +299,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548415339188" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548415584599" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/node_modules/gulp" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -587,12 +463,12 @@
       <workItem from="1548184715085" duration="8802000" />
       <workItem from="1548269530733" duration="19504000" />
       <workItem from="1548340214899" duration="40150000" />
-      <workItem from="1548412530231" duration="2741000" />
+      <workItem from="1548412530231" duration="2983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75936000" />
+    <option name="totallyTimeSpent" value="76178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -615,7 +491,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21258503" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38605443" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.48129252" />
@@ -723,27 +599,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/AbstractDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/js/controllers/register-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/RoomDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/RoomDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -1140,16 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/appointment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/alerts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1158,6 +1003,46 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <marker date="1548415337730" expanded="true" signature="880:1382" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/appointment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="34">
+            <caret line="2" column="24" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="55" selection-start-column="55" selection-end-column="55" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
