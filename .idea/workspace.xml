@@ -72,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -84,9 +84,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/src/templates/familie.html">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -191,7 +195,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/socket/WebSocketConfig.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/.gitignore" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/package.json" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/controller/UserController.java" />
@@ -241,6 +244,7 @@
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/README.md" />
         <option value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -262,7 +266,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="438" />
     <option name="y" value="21" />
     <option name="width" value="869" />
@@ -284,6 +288,17 @@
               <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
+              <item name="intelligent-emergency-hospital-system-frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intelligent-emergency-hospital-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intelligent-emergency-hospital-system" type="462c0819:PsiDirectoryNode" />
+              <item name="intelligent-emergency-hospital-system-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -299,7 +314,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548415711555" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548416358291" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/intelligent-emergency-hospital-system-frontend/node_modules/gulp" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -463,12 +478,12 @@
       <workItem from="1548184715085" duration="8802000" />
       <workItem from="1548269530733" duration="19504000" />
       <workItem from="1548340214899" duration="40150000" />
-      <workItem from="1548412530231" duration="2983000" />
+      <workItem from="1548412530231" duration="3772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76178000" />
+    <option name="totallyTimeSpent" value="76967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -599,17 +614,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/dao/RoomDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="e#781#782#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/intelligent-emergency-hospital-system-backend/src/main/java/ro/ionutmarin/iehs/entity/RoomEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
@@ -1043,6 +1047,13 @@
             <caret column="55" selection-start-column="55" selection-end-column="55" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
