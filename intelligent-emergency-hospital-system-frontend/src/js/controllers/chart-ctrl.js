@@ -138,4 +138,29 @@ function ChartCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, l
     };
 
     $scope.getAppointmentsCalendarZwing();
+
+    //CHART 4
+    $scope.getAlertByRoom = function () {
+        $http({method: 'GET', url: 'http://localhost:8081/chart/alertsByRoom'}).then(function (response) {
+            console.log("testtt2");
+
+            console.log(Object.entries(response.data));
+
+            var animals = [['Dogs', 9], ['Cats', 3], ['Parrots', 4]];
+
+            //Object.entries(response.data)
+
+            $scope.alertsByRoomJson = {
+                type: 'bar',
+                series: [
+                    {
+                        values: Object.entries(response.data)
+                    }
+                ]
+            };
+
+        });
+    };
+
+    $scope.getAlertByRoom();
 }

@@ -6,6 +6,7 @@
             <option value="1" selected="selected">Doctori - Specializare</option>
             <option value="2">Flux Internari</option>
             <option value="3">Flux Internari - varianta 2</option>
+            <option value="4">Alerte - Camere</option>
         </select>
 
         <br/><br/><br/><br/>
@@ -17,5 +18,19 @@
 
         <div zingchart  ng-show="chartDropDown=='3'"
              id="doctorBySpecId2" zc-json="appointmentCalendarZwingJson" zc-width="100%" zc-height="90%"></div>
+
+        <div>
+            <div zingchart  ng-show="chartDropDown=='4'"
+                 id="alertsByRoom" zc-json="alertsByRoomJson" zc-width="100%" zc-height="90%">
+            </div>
+            <!--<form>-->
+                <!--<input class="datepicker validate" type="date" id="dateFin" name="from" ng-model="alertDate.from" placeholder="yyyy-MM-dd"/>-->
+                <!--{{alertDate.from}}-->
+    <!---->
+                <!--<input class="datepicker validate" type="date" id="dateFin" name="to" ng-model="alertDate.to" placeholder="yyyy-MM-dd"/>-->
+                <!--{{alertDate.to}}-->
+            <!--</form>-->
+        </div>
+
     </div>
 </div>

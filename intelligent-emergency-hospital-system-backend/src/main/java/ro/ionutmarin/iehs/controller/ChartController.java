@@ -4,6 +4,7 @@ import io.jsonwebtoken.lang.Collections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ro.ionutmarin.iehs.dao.AlertDao;
 import ro.ionutmarin.iehs.dao.AppointmentDao;
 import ro.ionutmarin.iehs.dao.DoctorDao;
 import ro.ionutmarin.iehs.entity.AppointmentEntity;
@@ -30,6 +31,9 @@ public class ChartController {
 
     @Autowired
     private AppointmentDao appointmentDao;
+
+    @Autowired
+    private AlertDao alertDao;
 
     @RequestMapping(value = "/doctorBySpecialization")
     public Map<String, Long> getNoOfDoctorsGroupBySpecialization() {
@@ -62,17 +66,25 @@ public class ChartController {
 
         return appCalendar;
     }
+
     @RequestMapping(value = "/appointmentCalendar2")
     public Map<String, Long> getAppointmentCalendar2() {
-
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-
         Map<String, Long> doctorBySpecialization = appointmentDao.findAll()
                 .stream()
                 .collect(groupingBy(app -> sdf.format(new Date(app.getTimestamp().getTime())), counting()));
 
         System.out.println(doctorBySpecialization);
-
         return doctorBySpecialization;
+    }
+
+    @RequestMapping(value = "/alertsByRoom")
+    public Map<String, Long> getAlertsByRoom() {
+        Map<String, Long> alertsByRoom = alertDao.findAll()
+                .stream()
+                .collect(groupingBy(alert -> "Camera " + alert.getRoomNumber(), counting()));
+
+        System.out.println(alertsByRoom);
+        return alertsByRoom;
     }
 }

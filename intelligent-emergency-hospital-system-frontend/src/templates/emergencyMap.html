@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<style>
+    @keyframes blinking {
+        0%{
+            background-color: #FF2025;
+            border: 0px solid #FF2025;
+        }
+
+        100%{
+            background-color: #FFFDFE;
+            border: 0px solid #FFFDFE;
+        }
+    }
+    .blink{
+        /* NAME | TIME | ITERATION */
+        animation: blinking 1s infinite;
+    }
+    .ajs-message { color: #31708f;  background-color: #d9edf7;  border-color: #31708f; }
+</style>
+<div ng-controller="EmergencyMapCtrl" class="container" style="padding:10px 10px;">
+        <div class="container" style="padding:10px 10px;">
+            <label for="alertInput">Alegeti o data de inceput pentru alerte:</label>
+            <input type="date" id="alertInput" name="input" ng-model="alertStartDate" ng-change="getEmergencies(alertStartDate)"
+                   placeholder="dd-MM-yyyy" min="2019-01-01" required value="getToday()" data-ng-init="getEmergencies()"/>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>Numar Camera</th>
+                    <th>Descriere Camera</th>
+                    <th>Numar alerte</th>
+                    <th>Data</th>
+                    <th>Utilizator</th>
+                    <th>Mesaj</th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="e in emergencies | orderBy: 'e.alertEntityList.length'">
+                    <tr ng-repeat="a in e.alertEntityList">
+                        <td ng-if="$first" rowspan="{{e.alertEntityList.length == 0 ? 1 : e.alertEntityList.length}}">{{e.roomEntity.number}}</td>
+                        <td ng-if="$first" rowspan="{{e.alertEntityList.length == 0 ? 1: e.alertEntityList.length}}">{{e.roomEntity.description}}</td>
+                        <td ng-if="$first" rowspan="{{e.alertEntityList.length == 0 ? 1 : e.alertEntityList.length}}">{{e.alertEntityList.length}}</td>
+                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5)}">{{getReadableDate(a.timestamp)}}</td>
+                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5)}">{{a.username}}</td>
+                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5)}">{{a.message}}</td>
+                    </tr>
+                    <tr ng-if="e.alertEntityList.length == 0">
+                        <td>{{e.roomEntity.number}}</td>
+                        <td>{{e.roomEntity.description}}</td>
+                        <td>{{e.alertEntityList.length}}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                <!--<td>{{e.roomEntity.description}}</td>-->
+                <!--<td>{{e.roomEntity.number}}</td>-->
+                <!--<td>{{e.alertEntityList.length}}</td>-->
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+</div>
+<!--rowspan="{{teacher.student.length}}"-->

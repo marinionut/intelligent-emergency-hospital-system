@@ -36,14 +36,18 @@ public class AlertEntity {
     @Column(name = "type")
     private String type;
 
+    @Column(name = "roomNumber")
+    private int roomNumber;
+
     public AlertEntity() {
     }
 
-    public AlertEntity(String username, String message, Timestamp timestamp, String type) {
+    public AlertEntity(String username, String message, Timestamp timestamp, String type, int roomNumber) {
         this.username = username;
         this.message = message;
         this.timestamp = timestamp;
         this.type = type;
+        this.roomNumber = roomNumber;
     }
 
     public int getId() {
@@ -84,5 +88,13 @@ public class AlertEntity {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
     }
 }

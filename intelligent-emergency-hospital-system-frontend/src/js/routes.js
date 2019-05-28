@@ -50,6 +50,10 @@ angular.module('RDash')
                 url: '/charts',
                 templateUrl: 'templates/charts.html'
             })
+            .state('emergencyMap', {
+                url: '/emergencyMap',
+                templateUrl: 'templates/emergencyMap.html'
+            })
             .state('doctor', {
                 url: '/doctor',
                 templateUrl: 'templates/doctor.html'

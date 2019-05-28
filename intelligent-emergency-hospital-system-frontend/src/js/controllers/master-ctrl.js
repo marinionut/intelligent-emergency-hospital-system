@@ -89,6 +89,10 @@ function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, AuthService
             $scope.pageName = "Camere";
         } else if(next.name === 'appointment') {
             $scope.pageName = "Internari";
+        } else if(next.name === 'charts') {
+            $scope.pageName = "Rapoarte";
+        } else if(next.name === 'emergencyMap') {
+            $scope.pageName = "Harta urgente";
         } else {
             $scope.pageName = "";
         }

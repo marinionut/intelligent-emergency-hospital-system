@@ -29,16 +29,28 @@ public class AlertSenderController {
     private SmsService smsService;
 
     @RequestMapping(value = "/sendMessage")
-    public void sendMessage(@RequestParam("username") String username, @RequestParam("message") String message) throws Exception {
-        AlertEntity alertEntity = new AlertEntity(username, message, new Timestamp(System.currentTimeMillis()), ALERT_TYPE_NOTIFICATION);
+    public void sendMessage(@RequestParam("username") String username,
+                            @RequestParam("message") String message,
+                            @RequestParam("roomNumber") int roomNumber) throws Exception {
+        AlertEntity alertEntity = new AlertEntity(username,
+                message,
+                new Timestamp(System.currentTimeMillis()),
+                ALERT_TYPE_NOTIFICATION,
+                roomNumber);
         alertDao.save(alertEntity);
 
         this.template.convertAndSend("/topic/alerts/" + username, new HelloMessage(message));
     }
 
     @RequestMapping(value = "/sendAlert")
-    public void simple(@RequestParam("username") String username, @RequestParam("message") String message) {
-        AlertEntity alertEntity = new AlertEntity(username, message, new Timestamp(System.currentTimeMillis()), ALERT_TYPE_NOTIFICATION);
+    public void simple(@RequestParam("username") String username,
+                       @RequestParam("message") String message,
+                       @RequestParam("roomNumber") int roomNumber) {
+        AlertEntity alertEntity = new AlertEntity(username,
+                message,
+                new Timestamp(System.currentTimeMillis()),
+                ALERT_TYPE_NOTIFICATION,
+                roomNumber);
         alertDao.save(alertEntity);
 
         template.convertAndSend("/topic/alerts/" + username, new HelloMessage(message));
@@ -47,8 +59,13 @@ public class AlertSenderController {
     @RequestMapping(value = "/sendSms")
     public void sendSms(@RequestParam("username") String username,
                         @RequestParam("message") String message,
-                        @RequestParam("phoneNumber") String phoneNumber) throws Exception {
-        AlertEntity alertEntity = new AlertEntity(username, message, new Timestamp(System.currentTimeMillis()), ALERT_TYPE_SMS);
+                        @RequestParam("phoneNumber") String phoneNumber,
+                        @RequestParam("roomNumber") int roomNumber) throws Exception {
+        AlertEntity alertEntity = new AlertEntity(username,
+                message,
+                new Timestamp(System.currentTimeMillis()),
+                ALERT_TYPE_SMS,
+                roomNumber);
         alertDao.save(alertEntity);
 
         smsService.sendSms(phoneNumber, message);
