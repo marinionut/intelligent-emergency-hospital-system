@@ -20,7 +20,8 @@
     "gulp-wrap": "^0.11.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "pump": "^1.0.2"
+    "pump": "^1.0.2",
+    "ng-table": "^0.5.4"
   },
   "dependencies": {
     "@bower_components/angular": "angular/bower-angular#^1.6.2",
@@ -38,6 +39,8 @@
     "@bower_components/stomp-websocket": "jmesnil/stomp-websocket#^2.3.4",
     "@bower_components/bootbox": "makeusabrew/bootbox#^4.4.0",
     "@bower_components/AlertifyJS": "MohammadYounes/AlertifyJS#^1.11.2",
+    "@bower_components/ngTable": "esvit/ng-table#^3.0.1",
+    "@bower_components/angular-calendar-heatmap": "g1eb/angular-calendar-heatmap#^0.3.2",
     "gulp-util": "^3.0.8",
     "jwt-simple": "^0.5.1",
     "passport": "^0.3.2",
@@ -57,6 +60,6 @@
     "yarn": ">= 1.0.0"
   },
   "scripts": {
-    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), require('path').resolve('src/components'), 'junction') } catch (e) { }\""
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('./node_modules/@bower_components'), require('path').resolve('./src/components'), 'junction') } catch (e) { }\""
   }
 }

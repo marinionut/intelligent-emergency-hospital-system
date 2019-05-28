@@ -20,7 +20,7 @@ angular.module('RDash')
         $stateProvider
             .state('index', {
                 url: '/',
-                templateUrl: 'templates/doctor.html'
+                templateUrl: 'templates/welcome.html'
             })
             .state('login', {
                 url: '/login',
@@ -45,6 +45,10 @@ angular.module('RDash')
             .state('appointment', {
                 url: '/appointment',
                 templateUrl: 'templates/appointment.html'
+            })
+            .state('charts', {
+                url: '/charts',
+                templateUrl: 'templates/charts.html'
             })
             .state('doctor', {
                 url: '/doctor',

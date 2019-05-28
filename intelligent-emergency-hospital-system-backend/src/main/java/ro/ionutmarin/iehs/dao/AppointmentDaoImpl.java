@@ -2,11 +2,13 @@ package ro.ionutmarin.iehs.dao;
 
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
+import org.joda.time.DateTime;
 import org.springframework.stereotype.Repository;
 import ro.ionutmarin.iehs.entity.AppointmentEntity;
 import ro.ionutmarin.iehs.entity.DoctorEntity;
 
 import javax.transaction.Transactional;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Repository("appointmentDao")
@@ -15,6 +17,7 @@ public class AppointmentDaoImpl  extends AbstractDao implements AppointmentDao {
 
     @Override
     public void save(AppointmentEntity appointmentEntity) {
+        appointmentEntity.setTimestamp(new Timestamp(DateTime.now().getMillis()));
         persist(appointmentEntity);
     }
 

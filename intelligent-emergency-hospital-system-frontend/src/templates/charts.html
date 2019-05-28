@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<div ng-controller="ChartCtrl" class="container" style="padding:10px 10px;" >
+    <div class="container" style="padding:10px 10px;">
+        <select ng-model="chartDropDown" style="padding:10px 10px;">
+            <option value="" selected disabled hidden>Alegeti tipul graficului:</option>
+            <option value="1" selected="selected">Doctori - Specializare</option>
+            <option value="2">Flux Internari</option>
+            <option value="3">Flux Internari - varianta 2</option>
+        </select>
+
+        <br/><br/><br/><br/>
+        <div zingchart  ng-show="chartDropDown=='1'"
+             id="doctorBySpecId" zc-json="doctorBySpecJson" zc-width="100%" zc-height="500px"></div>
+
+        <calendar-heatmap ng-show="chartDropDown=='2'" data="appointmentCalendarJson"
+                          color="'#ee0000'" overview="'year'" handler="print"></calendar-heatmap>
+
+        <div zingchart  ng-show="chartDropDown=='3'"
+             id="doctorBySpecId2" zc-json="appointmentCalendarZwingJson" zc-width="100%" zc-height="90%"></div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('RoomCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', 'leafletData', 'FileSaver', RoomCtrl]);
+    .controller('RoomCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'leafletData', 'FileSaver', 'NgTableParams', RoomCtrl]);
 
-function RoomCtrl($scope, $rootScope, $window, $http, $q, $interval, leafletData, FileSaver) {
+function RoomCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, leafletData, FileSaver, NgTableParams) {
     $scope.rooms = [];
     $scope.failMessage = "";
 
@@ -14,6 +14,18 @@ function RoomCtrl($scope, $rootScope, $window, $http, $q, $interval, leafletData
     $scope.getRooms = function () {
         $http({method: 'GET', url: 'http://localhost:8081/api/room/all'}).then(function (response) {
             $scope.rooms = response.data;
+
+            $scope.roomsTable = new NgTableParams({
+                page: 1,
+                count: 12
+            }, {
+                total: $scope.rooms.length,
+                getData: function (params) {
+                    params.total($scope.rooms.length);
+                    $scope.rooms = params.sorting() ? $filter('orderBy')($scope.rooms, params.orderBy()) : $scope.rooms;
+                    return $scope.rooms.slice((params.page() - 1) * params.count(), params.page() * params.count());
+                }
+            });
         });
 
     };

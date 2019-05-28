@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name="appointment")
@@ -32,6 +33,9 @@ public class AppointmentEntity {
 
     @Column(name = "doctor_id")
     private int doctorId;
+
+    @Column(name = "timestamp")
+    private Timestamp timestamp;
 
     @JoinColumn(name = "patient_id", updatable=false, insertable=false)
     @OneToOne(targetEntity = PatientEntity.class, fetch = FetchType.EAGER)
@@ -99,5 +103,13 @@ public class AppointmentEntity {
 
     public void setDoctor(DoctorEntity doctor) {
         this.doctor = doctor;
+    }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
     }
 }

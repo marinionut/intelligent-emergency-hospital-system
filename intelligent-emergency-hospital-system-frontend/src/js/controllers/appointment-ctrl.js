@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('AppointmentCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', 'leafletData', 'FileSaver', AppointmentCtrl]);
+    .controller('AppointmentCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'leafletData', 'FileSaver', 'NgTableParams', AppointmentCtrl]);
 
-function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, leafletData, FileSaver) {
+function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, leafletData, FileSaver, NgTableParams) {
     $scope.appointments = [];
     $scope.full = [];
     $scope.doctors = [];
@@ -62,12 +62,22 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, leaf
     $scope.getAppointments = function () {
         $http({method: 'GET', url: 'http://localhost:8081/api/appointment/all'}).then(function (response) {
             $scope.appointments = response.data;
+
+            $scope.appointmentTable = new NgTableParams({
+                page: 1,
+                count: 12
+            }, {
+                total: $scope.appointments.length,
+                getData: function (params) {
+                    params.total($scope.appointments.length);
+                    $scope.appointments = params.sorting() ? $filter('orderBy')($scope.appointments, params.orderBy()) : $scope.appointments;
+                    return $scope.appointments.slice((params.page() - 1) * params.count(), params.page() * params.count());
+                }
+            });
         });
     };
 
     $scope.getAppointments();
-
-
 
     $scope.addAppointment = function () {
 

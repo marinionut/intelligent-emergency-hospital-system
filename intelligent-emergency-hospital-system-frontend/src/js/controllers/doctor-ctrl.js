@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('DoctorCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', 'leafletData', 'FileSaver', DoctorCtrl]);
+    .controller('DoctorCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'leafletData', 'FileSaver', 'NgTableParams', DoctorCtrl]);
 
-function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, leafletData, FileSaver) {
+function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, leafletData, FileSaver, NgTableParams) {
     $scope.doctors = [];
     $scope.failMessage = "";
 
@@ -14,6 +14,18 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, leafletDa
     $scope.getDoctors = function () {
         $http({method: 'GET', url: 'http://localhost:8081/api/doctor/all'}).then(function (response) {
             $scope.doctors = response.data;
+
+            $scope.doctorsTable = new NgTableParams({
+                page: 1,
+                count: 12
+            }, {
+                total: $scope.doctors.length,
+                getData: function (params) {
+                    params.total($scope.doctors.length);
+                    $scope.doctors = params.sorting() ? $filter('orderBy')($scope.doctors, params.orderBy()) : $scope.doctors;
+                    return $scope.doctors.slice((params.page() - 1) * params.count(), params.page() * params.count());
+                }
+            });
         });
 
     };

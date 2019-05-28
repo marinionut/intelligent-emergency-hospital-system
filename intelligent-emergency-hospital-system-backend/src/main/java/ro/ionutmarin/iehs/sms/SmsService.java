@@ -29,7 +29,7 @@ public class SmsService {
                 .creator(new PhoneNumber(toSmsNumber), // to
                         new PhoneNumber("+14433718234"), // from
                         textMessage);
-        //messageCreator.create();
+        messageCreator.create();
 
         //System.out.println(message.getSid());
     }

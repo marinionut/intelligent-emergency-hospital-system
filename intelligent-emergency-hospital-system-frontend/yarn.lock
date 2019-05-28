@@ -14,6 +14,14 @@
   version "2.5.0"
   resolved "https://codeload.github.com/angular-ui/bootstrap-bower/tar.gz/752d6a79f500391a7efb06d80f37405c920a6f2b"
 
+"@bower_components/angular-calendar-heatmap@g1eb/angular-calendar-heatmap#^0.3.2":
+  version "0.3.2"
+  resolved "https://codeload.github.com/g1eb/angular-calendar-heatmap/tar.gz/e764f3c4597e25e308cef63cb0eb7f793513dffa"
+  dependencies:
+    angular "^1.4.8"
+    d3 "^3.5.16"
+    moment "^2.13.0"
+
 "@bower_components/angular-cookies@angular/bower-angular-cookies#^1.6.2":
   version "1.7.6"
   resolved "https://codeload.github.com/angular/bower-angular-cookies/tar.gz/7f3c6ebeb23e1c15b347bdd16464359ff0f4fdba"
@@ -57,6 +65,12 @@
   version "3.3.1"
   resolved "https://codeload.github.com/jquery/jquery/tar.gz/32b00373b3f42e5cdcb709df53f3b08b7184a944"
 
+"@bower_components/ngTable@esvit/ng-table#^3.0.1":
+  version "0.0.0-semantic-release"
+  resolved "https://codeload.github.com/esvit/ng-table/tar.gz/fd86571f57a11ce9aa19ad720f66a8b4ca0e1746"
+  dependencies:
+    "@types/angular" "^1.5.13"
+
 "@bower_components/rdash-ui@rdash/rdash-ui#1.0.*":
   version "1.0.1"
   resolved "https://codeload.github.com/rdash/rdash-ui/tar.gz/a12324ffa359a8a4446c05c8a71efe414db6dda2"
@@ -86,6 +100,10 @@
   resolved "https://codeload.github.com/jmesnil/stomp-websocket/tar.gz/b2ba8ce3071215131e99aba9df7061eb4ffbab9e"
   optionalDependencies:
     websocket latest
+
+"@types/angular@^1.5.13":
+  version "1.6.54"
+  resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.54.tgz#f9d5a03e4da7b021a6dabe5d63e899ed4567a5bd"
 
 abbrev@1:
   version "1.1.1"
@@ -147,7 +165,7 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular@1.x, angular@^1.0.8, angular@^1.6.2, angular@~1.2.9:
+angular@1.x, angular@^1.0.8, angular@^1.4.8, angular@^1.6.2, angular@~1.2.9:
   version "1.7.6"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.6.tgz#db3bd96e3305c870f6227b9b32a4d761880473da"
 
@@ -1074,6 +1092,10 @@ csurf@~1.8.3:
 ctype@0.5.3:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/ctype/-/ctype-0.5.3.tgz#82c18c2461f74114ef16c135224ad0b9144ca12f"
+
+d3@^3.5.16:
+  version "3.5.17"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-3.5.17.tgz#bc46748004378b21a360c9fc7cf5231790762fb8"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -2951,7 +2973,7 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@2.x.x:
+moment@2.x.x, moment@^2.13.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
 
@@ -3052,6 +3074,10 @@ negotiator@0.6.1:
 next-tick@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-0.2.2.tgz#75da4a927ee5887e39065880065b7336413b310d"
+
+ng-table@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/ng-table/-/ng-table-0.5.4.tgz#03f461cfea5b384d8c8977351850147804287a2c"
 
 node-pre-gyp@^0.10.0:
   version "0.10.3"

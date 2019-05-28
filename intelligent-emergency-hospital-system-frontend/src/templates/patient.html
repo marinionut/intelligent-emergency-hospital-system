@@ -45,37 +45,21 @@
         </fieldset>
     </div>
     <div class="container" style="padding:10px 10px;">
-        <table class="table table-bordered" id="tbl_employees">
-            <thead thead class="thead-dark">
-            <tr>
-                <th>#</th>
-                <!--<th>Id</th>-->
-                <th>Nume</th>
-                <th>Prenume</th>
-                <th>Adresa</th>
-                <th>Telefon</th>
-                <th>Varsta</th>
-                <th>Cnp</th>
-                <th>Gen</th>
-                <th>Actiuni</th>
-            </tr>
-            </thead>
-            <tbody id="tbl_posts_body">
-            <tr ng-repeat="p in patients">
-                <td><span class="sn">{{$index + 1}}</span>.</td>
+        <table ng-table="patientsTable" class="table table-bordered table-striped table-hover" id="tbl_employees">
+            <tr ng-repeat="p in $data">
+                <td data-title="'#'"><span class="sn">{{(patientsTable.page() - 1) * patientsTable.count() + $index + 1}}</span>.</td>
                 <!--<td>{{doc.id}}</td>-->
-                <td>{{p.firstName}}</td>
-                <td>{{p.lastName}}</td>
-                <td>{{p.address}}</td>
-                <td>{{p.phoneNumber}}</td>
-                <td>{{p.age}}</td>
-                <td>{{p.cnp}}</td>
-                <td>{{p.gender}}</td>
-                <td ng-hide="hideAllActions()">
+                <td data-title="'Nume'" sortable="'firstName'">{{p.firstName}}</td>
+                <td data-title="'Prenume'" sortable="'lastName'">{{p.lastName}}</td>
+                <td data-title="'Adresa'" sortable="'address'">{{p.address}}</td>
+                <td data-title="'Telefon'" sortable="'phoneNumber'">{{p.phoneNumber}}</td>
+                <td data-title="'Varsta'" sortable="'age'">{{p.age}}</td>
+                <td data-title="'Cnp'" sortable="'cnp'">{{p.cnp}}</td>
+                <td data-title="'Gen'" sortable="'gender'">{{p.gender}}</td>
+                <td data-title="'Actiuni'" ng-hide="hideAllActions()">
                     <button type="button" class="btn-xs btn-danger" ng-click="deletePatient(p.id)">Delete</button>
                 </td>
             </tr>
-            </tbody>
         </table>
     </div>
 </div>

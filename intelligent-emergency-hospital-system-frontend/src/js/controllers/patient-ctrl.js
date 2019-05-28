@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('PatientCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', PatientCtrl]);
+    .controller('PatientCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$filter','NgTableParams', PatientCtrl]);
 
-function PatientCtrl($scope, $rootScope, $window, $http, $q) {
+function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTableParams) {
     $scope.patients = [];
     $scope.failMessage = "";
 
@@ -14,8 +14,19 @@ function PatientCtrl($scope, $rootScope, $window, $http, $q) {
     $scope.getPatients = function () {
         $http({method: 'GET', url: 'http://localhost:8081/api/patient/all'}).then(function (response) {
             $scope.patients = response.data;
-        });
 
+            $scope.patientsTable = new NgTableParams({
+                page: 1,
+                count: 12
+            }, {
+                total: $scope.patients.length,
+                getData: function (params) {
+                    params.total($scope.patients.length);
+                    $scope.patients = params.sorting() ? $filter('orderBy')($scope.patients, params.orderBy()) : $scope.patients;
+                    return $scope.patients.slice((params.page() - 1) * params.count(), params.page() * params.count());
+                }
+            });
+        });
     };
     $scope.getPatients();
 

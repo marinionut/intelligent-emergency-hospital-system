@@ -18,6 +18,7 @@ public class AlertSenderController {
 
     public static final String ALERT_TYPE_SMS = "sms";
     public static final String ALERT_TYPE_NOTIFICATION = "notification";
+
     @Autowired
     private SimpMessagingTemplate template;
 

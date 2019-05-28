@@ -30,27 +30,17 @@
         </fieldset>
     </div>
     <div class="container" style="padding:10px 10px;">
-        <table class="table table-bordered" id="tbl_employees">
-            <thead thead class="thead-dark">
-            <tr>
-                <th>#</th>
-                <!--<th>Id</th>-->
-                <th>Doctor</th>
-                <th>Pacient</th>
-                <th>Camera</th>
-                <th>Actiuni</th>
-            </tr>
-            </thead>
-            <tbody id="tbl_posts_body">
-            <tr ng-repeat="app in appointments">
-                <td><span class="sn">{{$index + 1}}</span>.</td>
-                <td>{{app.doctor.firstName}} {{app.doctor.lastName}} - {{app.doctor.specialization}}</td>
-                <td>{{app.patient.firstName}} {{app.patient.lastName}}</td>
-                <td>{{app.room.number}} - {{app.room.description}}</td>
-                <td ng-hide="hideAllActions()">
-                    <button type="button" class="btn-xs btn-danger" ng-click="deleteAppointment(app.id)" ng-hide="hideDelete()">Delete</button>
-                </td>
-            </tr>
+        <table ng-table="appointmentTable" class="table table-bordered table-striped table-hover" id="tbl_employees">
+            <tbody id="tbl_posts_body" style="overflow-y:scroll;">
+                <tr ng-repeat="app in $data">
+                    <td data-title="'#'"><span class="sn">{{(appointmentTable.page() - 1) * appointmentTable.count() + $index + 1}}</span>.</td>
+                    <td data-title="'Doctor'" sortable="'firstName'">{{app.doctor.firstName}} {{app.doctor.lastName}} - {{app.doctor.specialization}}</td>
+                    <td data-title="'Pacient'">{{app.patient.firstName}} {{app.patient.lastName}}</td>
+                    <td data-title="'Camera'">{{app.room.number}} - {{app.room.description}}</td>
+                    <td data-title="'Actiuni'" ng-hide="hideAllActions()">
+                        <button type="button" class="btn-xs btn-danger" ng-click="deleteAppointment(app.id)" ng-hide="hideDelete()">Delete</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
