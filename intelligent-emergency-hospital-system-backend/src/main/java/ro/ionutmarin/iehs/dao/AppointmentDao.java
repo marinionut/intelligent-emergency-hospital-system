@@ -10,4 +10,5 @@ public interface AppointmentDao {
     List<AppointmentEntity> findAll();
     void delete(int id);
     AppointmentEntity findById(int id);
+    AppointmentEntity findByRoomIdAndBedNumber(int roomId, int bedNumber);
 }

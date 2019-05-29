@@ -5,30 +5,52 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.rest.api.v2010.account.MessageCreator;
 import com.twilio.type.PhoneNumber;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.net.URI;
 
 @Service
 public class SmsService {
 
     // Find your Account Sid and Auth Token at twilio.com/console
     public static final String ACCOUNT_SID =
-            "ACc5fb1c6036f635f82090a40128cc9fcb";
+            "ACbf1234e856055e7492c47b385418a6f6";
     public static final String AUTH_TOKEN =
-            "37b0661fa5249e579fa86f9b6c95fd0e";
+            "a12f4d2747d43cd7ca1c6b6e659512c3";
+
+    public static final String HOSPITAL_PHONE_NUMBER =
+            "+18652902543";
+
+    @Value("${twilio.account.sid}")
+    private String accountSid;
+
+    @Value("${twilio.auth.token}")
+    private String authToken;
+
+    @Value("${twilio.phone.number}")
+    private String hospitalPhoneNumber;
+
+    @Value("${ngrok.url}")
+    private String ngrokUrl;
+
+
 
     @PostConstruct
     public void init() {
-        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+        Twilio.init(accountSid, authToken);
     }
 
     public  void sendSms(String toSmsNumber, String textMessage) {
+        System.out.println("Sending sms to:" + toSmsNumber + " with text: " + textMessage);
 
         MessageCreator messageCreator = Message
-                .creator(new PhoneNumber(toSmsNumber), // to
-                        new PhoneNumber("+14433718234"), // from
-                        textMessage);
+                .creator(new PhoneNumber("+40" + toSmsNumber), // to
+                       // new PhoneNumber("+14433718234"), // from
+                        new PhoneNumber(hospitalPhoneNumber),
+                        textMessage)
+                .setStatusCallback(URI.create(ngrokUrl + "/callback/status/sms"));
         messageCreator.create();
 
         //System.out.println(message.getSid());

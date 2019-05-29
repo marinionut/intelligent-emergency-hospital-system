@@ -9,5 +9,6 @@ public interface UserDao {
     List<UserEntity> findAllUsers();
     List<UserEntity> findByUsername(String username);
     int deleteUser(int id);
+    UserEntity findById(int id);
 //    int editUserRole(String username, int role);
 }

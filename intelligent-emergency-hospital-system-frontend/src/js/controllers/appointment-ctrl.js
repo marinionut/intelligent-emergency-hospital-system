@@ -85,18 +85,21 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
         console.log("doctor " + $scope.inputDoctor);
         console.log("patient " + $scope.inputPatient);
         console.log("room " + $scope.inputRoom);
+        console.log("room " + $scope.inputBedNumber);
 
         var newAppointment = {
             id: 0,
             doctorId: $scope.inputDoctor,
             patientId: $scope.inputPatient,
-            roomId: $scope.inputRoom
+            roomId: $scope.inputRoom,
+            bedNumber: $scope.inputBedNumber
         };
 
         // alert(newVM.vmName + " " + newVM.zone + " " + newVM.image);
         if (newAppointment.doctorId == null || newAppointment.doctorId == ""
             || newAppointment.patientId == null || newAppointment.patientId == ""
-            || newAppointment.roomId == null || newAppointment.roomId == "") {
+            || newAppointment.roomId == null || newAppointment.roomId == ""
+            || newAppointment.bedNumber == null || newAppointment.bedNumber == "") {
             window.alert("Va rugam completati toate campurile!")
             return;
         }
@@ -108,6 +111,7 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
                 $scope.inputDoctor = "";
                 $scope.inputPatient = "";
                 $scope.inputRoom = "";
+                $scope.inputBedNumber = "";
                 $scope.getAppointments();
             } else if (response.status == 500) {
                 $scope.failMessage = response.data;

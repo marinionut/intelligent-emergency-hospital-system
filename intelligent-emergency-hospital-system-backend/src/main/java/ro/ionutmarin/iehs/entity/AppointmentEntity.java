@@ -37,6 +37,9 @@ public class AppointmentEntity {
     @Column(name = "timestamp")
     private Timestamp timestamp;
 
+    @Column(name = "bed_number")
+    private int bedNumber;
+
     @JoinColumn(name = "patient_id", updatable=false, insertable=false)
     @OneToOne(targetEntity = PatientEntity.class, fetch = FetchType.EAGER)
     private PatientEntity patient;
@@ -111,5 +114,13 @@ public class AppointmentEntity {
 
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public int getBedNumber() {
+        return bedNumber;
+    }
+
+    public void setBedNumber(int bedNumber) {
+        this.bedNumber = bedNumber;
     }
 }

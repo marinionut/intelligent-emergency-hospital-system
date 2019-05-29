@@ -39,6 +39,9 @@ public class DoctorEntity {
         @Column(name = "specialization")
         private String specialization;
 
+        @Column(name = "user_id")
+        private int  userId;
+
         public int getId() {
                 return id;
         }
@@ -85,5 +88,13 @@ public class DoctorEntity {
 
         public void setSpecialization(String specialization) {
                 this.specialization = specialization;
+        }
+
+        public int getUserId() {
+                return userId;
+        }
+
+        public void setUserId(int userId) {
+                this.userId = userId;
         }
 }

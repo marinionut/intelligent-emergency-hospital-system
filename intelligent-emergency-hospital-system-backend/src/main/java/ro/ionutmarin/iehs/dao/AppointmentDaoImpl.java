@@ -1,6 +1,7 @@
 package ro.ionutmarin.iehs.dao;
 
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Repository;
@@ -38,5 +39,17 @@ public class AppointmentDaoImpl  extends AbstractDao implements AppointmentDao {
                 .add(Restrictions.eq("id", id)).uniqueResult();
         return appointmentEntity;
     }
+
+    @Override
+    public AppointmentEntity findByRoomIdAndBedNumber(int roomId, int bedNumber) {
+        Criteria criteria = getSession()
+                .createCriteria(AppointmentEntity.class)
+                .add(Restrictions.eq("bed_number", bedNumber))
+                .add(Restrictions.eq("room_id", roomId));
+
+        List<AppointmentEntity> appointmentEntity = (List<AppointmentEntity>) criteria.list();
+        return appointmentEntity.get(0);
+    }
+
 
 }

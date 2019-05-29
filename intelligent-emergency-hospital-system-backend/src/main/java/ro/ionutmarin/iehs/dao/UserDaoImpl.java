@@ -32,6 +32,14 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     }
 
     @Override
+    public UserEntity findById(int id) {
+        Criteria criteria = getSession().createCriteria(UserEntity.class);
+        criteria.add(Restrictions.eq("id", id));
+        return (UserEntity) criteria.uniqueResult();
+
+    }
+
+    @Override
     public int deleteUser(int id) {
         String hql = "delete from UserEntity u where u.id = :id";
         return getSession().createQuery(hql).setInteger("id", id).executeUpdate();

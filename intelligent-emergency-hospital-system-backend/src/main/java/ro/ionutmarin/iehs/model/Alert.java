@@ -1,25 +1,27 @@
 package ro.ionutmarin.iehs.model;
 
 
+import org.joda.time.DateTime;
+
 public class Alert {
-    private int room;
+    private int roomNumber;
     private String message;
+    private String roomName;
+    private int bedNumber;
+    private int appointmentId;
+    private String username;
+    private long timestamp;
+    private String toPhoneNumber;
 
     public Alert() {
-
-    }
-
-    public Alert(int room, String message) {
-        this.room = room;
-        this.message = message;
     }
 
     public int getRoom() {
-        return room;
+        return roomNumber;
     }
 
-    public void setRoom(int room) {
-        this.room = room;
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
     }
 
     public String getMessage() {
@@ -30,11 +32,69 @@ public class Alert {
         this.message = message;
     }
 
+    public int getBedNumber() {
+        return bedNumber;
+    }
+
+    public void setBedNumber(int bedNumber) {
+        this.bedNumber = bedNumber;
+    }
+
+    public int getAppointmentId() {
+        return appointmentId;
+    }
+
+    public void setAppointmentId(int appointmentId) {
+        this.appointmentId = appointmentId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public String getToPhoneNumber() {
+        return toPhoneNumber;
+    }
+
+    public void setToPhoneNumber(String toPhoneNumber) {
+        this.toPhoneNumber = toPhoneNumber;
+    }
+
     @Override
     public String toString() {
         return "Alert{" +
-                "room=" + room +
+                "roomNumber=" + roomNumber +
                 ", message='" + message + '\'' +
+                ", roomName='" + roomName + '\'' +
+                ", bedNumber=" + bedNumber +
+                ", appointmentId=" + appointmentId +
+                ", username='" + username + '\'' +
+                ", timestamp=" + timestamp +
+                ", toPhoneNumber='" + toPhoneNumber + '\'' +
                 '}';
     }
 }

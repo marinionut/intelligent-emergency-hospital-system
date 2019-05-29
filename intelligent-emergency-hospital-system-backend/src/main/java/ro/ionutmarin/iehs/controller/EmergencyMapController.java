@@ -1,5 +1,6 @@
 package ro.ionutmarin.iehs.controller;
 
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,7 +11,10 @@ import ro.ionutmarin.iehs.entity.AlertEntity;
 import ro.ionutmarin.iehs.entity.RoomEntity;
 import ro.ionutmarin.iehs.model.Emergency;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -48,9 +52,24 @@ public class EmergencyMapController {
        return emergencies;
     }
 
+    private long getDate(String startDate) {
+        if (startDate == "NaN") {
+            System.out.println("start date is NaN");
+        }
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+
+        return startDate.equals("NaN") ?  cal.getTime().getTime() : Long.parseLong(startDate);
+    }
+
     @RequestMapping("/emergency")
     public List<Emergency> getEmergenciesByTimestamp(@RequestParam("startDate") String startDate) {
-        long startDateInMillis = Long.parseLong(startDate);
+        long startDateInMillis = getDate(startDate);
+
         List<RoomEntity> rooms = roomDao.findAll();
         List<AlertEntity> alerts = alertDao.findAll();
         List<Emergency> emergencies = new ArrayList<>();

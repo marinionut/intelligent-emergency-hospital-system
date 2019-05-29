@@ -36,4 +36,11 @@ public class RoomDaoImpl extends AbstractDao implements RoomDao {
                 .add(Restrictions.eq("id", id)).uniqueResult();
         return roomEntity;
     }
+
+    @Override
+    public RoomEntity findByRoomNumber(int number) {
+        RoomEntity roomEntity = (RoomEntity) getSession().createCriteria(RoomEntity.class)
+                .add(Restrictions.eq("number", number)).uniqueResult();
+        return roomEntity;
+    }
 }

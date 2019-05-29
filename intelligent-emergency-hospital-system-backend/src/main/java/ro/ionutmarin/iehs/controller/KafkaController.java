@@ -11,15 +11,21 @@ import ro.ionutmarin.iehs.model.Alert;
 @RestController
 @RequestMapping(value = "/kafka")
 public class KafkaController {
+
+
     private final Sender sender;
 
     @Autowired
     public KafkaController(Sender sender) {
         this.sender = sender;
     }
+
     @PostMapping(value = "/publish")
     public void sendMessageToKafkaTopic(@RequestParam("roomNumber") int roomNumber, @RequestParam("message") String message){
-        this.sender.sendMessage(new Alert(roomNumber, message));
+        Alert alert = new Alert();
+        alert.setRoomNumber(roomNumber);
+        alert.setMessage(message);
+        this.sender.sendMessage(alert);
     }
 
 }

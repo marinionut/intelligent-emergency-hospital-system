@@ -10,4 +10,5 @@ public interface RoomDao {
     List<RoomEntity> findAll();
     void delete(int id);
     RoomEntity findById(int id);
+    RoomEntity findByRoomNumber(int number);
 }

@@ -33,7 +33,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 //@Controller
 @RestController
-public class AlertController {
+public class AlertController implements Observer {
 
     FluxProcessor processor = DirectProcessor.create().serialize();
     FluxSink sink = processor.sink();
