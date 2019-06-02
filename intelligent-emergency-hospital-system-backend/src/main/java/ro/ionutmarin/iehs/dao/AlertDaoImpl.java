@@ -34,4 +34,13 @@ public class AlertDaoImpl extends AbstractDao implements AlertDao {
                 .uniqueResult();
         return alertEntity;
     }
+
+    @Override
+    public List<AlertEntity> findAlertByUsernameAndStatus(String username, int status) {
+        List<AlertEntity> alertEntity = (List<AlertEntity>) getSession().createCriteria(AlertEntity.class)
+                .add(Restrictions.eq("username", username))
+                .add(Restrictions.eq("status", status))
+                .list();
+        return alertEntity;
+    }
 }

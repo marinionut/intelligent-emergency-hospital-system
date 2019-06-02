@@ -37,6 +37,13 @@ public class DoctorDaoImpl  extends AbstractDao implements DoctorDao {
     }
 
     @Override
+    public DoctorEntity findByPhoneNumber(String phoneNumber) {
+        DoctorEntity doctorEntity = (DoctorEntity) getSession().createCriteria(DoctorEntity.class)
+                .add(Restrictions.eq("phone_number", phoneNumber)).uniqueResult();
+        return doctorEntity;
+    }
+
+    @Override
     public int updateByUserId(int userId) {
         return getSession()
                 .createQuery("update DoctorEntity d set d.userId=:value where d.userId=:userId")

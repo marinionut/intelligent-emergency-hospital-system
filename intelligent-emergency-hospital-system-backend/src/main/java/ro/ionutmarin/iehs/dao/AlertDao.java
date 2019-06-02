@@ -12,4 +12,5 @@ public interface AlertDao {
     void save(AlertEntity alertEntity);
     List<AlertEntity> findAll();
     AlertEntity findAlertByUid(String uid);
+    List<AlertEntity> findAlertByUsernameAndStatus(String username, int status);
 }

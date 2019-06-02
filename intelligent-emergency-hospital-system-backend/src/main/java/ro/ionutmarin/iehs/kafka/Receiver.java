@@ -33,7 +33,7 @@ public class Receiver {
                         @Headers MessageHeaders headers) {
         logger.info("$$ Business consumer -> received data='{}'", data);
         try {
-           // smsService.sendSms(data.getToPhoneNumber(), data.getMessage());
+            smsService.sendSms(data.getToPhoneNumber(), data.getMessage());
         } catch (Exception e) {
             System.out.println("\n\n\nEEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!");
             System.out.println(e);

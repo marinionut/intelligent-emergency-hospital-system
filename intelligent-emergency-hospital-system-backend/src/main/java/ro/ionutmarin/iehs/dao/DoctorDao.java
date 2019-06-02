@@ -11,4 +11,5 @@ public interface DoctorDao {
     void delete(int id);
     DoctorEntity findById(int id);
     int updateByUserId(int userId);
+    DoctorEntity findByPhoneNumber(String phoneNumber);
 }

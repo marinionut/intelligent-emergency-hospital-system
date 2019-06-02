@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="HospitAlert">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .block {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: #ff0c05;
+            color: white;
+            padding: 56px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .block:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" href="/css/themes/bootstrap.css">
+    <link rel="stylesheet" href="/css/alertify.css">
+    <script src="/alertify.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/js/app-module.js"></script>
+    <script src="/js/app-ctrl.js"></script>
+
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body ng-controller="HospitAlertCtrl" style="background-color:#94d2e6;">
+
+<h1 style="text-align: center;">HospitAlert</h1>
+<div style="width:100%;height: 100%">
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border"></legend>
+
+        <form class="form-inline">
+            <div class="form-group form-group-lg">
+                <label for="inputRoomNumber" style="font-size: 5vh;">Numbar camera</label>
+                <input style="font-size: 5vh;" type="number" class="form-control" id="inputRoomNumber" ng-model="inputRoomNumber"
+                       placeholder="numar camera" ng-value="inputRoomNumber" required />
+            </div>
+
+            <div class="form-group form-group-lg">
+                <label for="inputBed" style="font-size: 5vh;">Pat</label>
+                <input style="font-size: 5vh;" type="number" class="form-control" id="inputBed" ng-model="inputBed" ng-value="inputBed" placeholder="etaj" required />
+            </div>
+            <br/>
+            <button type="button" style="width:100%; margin-bottom: 5%;" class="btn btn-danger input-block-level" ng-click="registerRoomAndBedNumber()"><i class="glyphicon glyphicon-save" style="font-size: 7vh;"></i ><span  style="font-size: 7vh;">&nbsp;Salveaza date</span></button>
+            <br/>
+            <button type="button" style="width:100%;" class="btn btn-danger input-block-level" ng-click="needHelp()"><i class="glyphicon  glyphicon-alert" style="font-size: 12vh;"></i><span  style="font-size: 15vh;">&nbsp;Alerta</span></button>
+        </form>
+    </fieldset>
+</div>
+
+</body>
+
+</html>
