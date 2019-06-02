@@ -25,11 +25,18 @@ import reactor.core.publisher.FluxSink;
 import ro.ionutmarin.iehs.dao.AlertDao;
 import ro.ionutmarin.iehs.dao.AlertDaoImpl;
 import ro.ionutmarin.iehs.entity.AlertEntity;
+import ro.ionutmarin.iehs.model.Alert;
+import ro.ionutmarin.iehs.model.AlertAck;
 import ro.ionutmarin.iehs.model.Greetings;
 import ro.ionutmarin.iehs.model.HelloMessage;
 
+import java.sql.Timestamp;
 import java.time.LocalTime;
+import java.util.Comparator;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.stream.Collectors;
+
+import static ro.ionutmarin.iehs.util.Constants.ALERT_CONFIRMED;
 
 //@Controller
 @RestController
@@ -42,17 +49,26 @@ public class AlertController implements Observer {
     @Autowired
     private AlertDao alertDao;
 
-    @MessageMapping("/hello")
-    @SendTo("/topic/alerts")
-    public Greetings greeting(HelloMessage message) throws Exception {
+    @MessageMapping("/alert/ack")
+   // @SendTo("/topic/alerts")
+    public void greeting(AlertAck alertAck) throws Exception {
         Thread.sleep(1000); // simulated delay
-        return new Greetings("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
+        System.out.println("Received alert ack for username: " + alertAck.getUsername()
+                + " and alert uid: " + alertAck.getAlertUid());
+
+        AlertEntity alertEntity = alertDao.findAlertByUid(alertAck.getAlertUid());
+        System.out.println("founded alert with id:" + alertEntity);
+        alertEntity.setStatus(ALERT_CONFIRMED);
+        alertDao.save(alertEntity);
+
+        this.notifyClientForUpdate();
     }
 
     @MessageMapping("/topic/alerts/{username}")
     @SendTo("/topic/alerts/{username}")
-    public Greetings alert(@DestinationVariable String username, String message) {
-        return new Greetings(message);
+    public Alert alert(@DestinationVariable String username, Alert alert) {
+        //return new Greetings(message);
+        return alert;
     }
 
     @SuppressWarnings("unused")

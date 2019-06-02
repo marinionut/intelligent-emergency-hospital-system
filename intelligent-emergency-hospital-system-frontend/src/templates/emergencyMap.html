@@ -11,11 +11,26 @@
             border: 0px solid #FFFDFE;
         }
     }
+    @keyframes blinking-warning {
+        0%{
+            background-color: #ffd321;
+            border: 0px solid #ffd321;
+        }
+
+        100%{
+            background-color: #FFFDFE;
+            border: 0px solid #FFFDFE;
+        }
+    }
     .blink{
         /* NAME | TIME | ITERATION */
         animation: blinking 1s infinite;
     }
     .ajs-message { color: #31708f;  background-color: #d9edf7;  border-color: #31708f; }
+
+    .warning {
+        animation: blinking-warning 1s infinite;
+    }
 </style>
 <div ng-controller="EmergencyMapCtrl" class="container" style="padding:10px 10px;">
         <div class="container" style="padding:10px 10px;">
@@ -38,12 +53,13 @@
                         <td ng-if="$first" rowspan="{{e.alertEntityList.length == 0 ? 1 : e.alertEntityList.length}}">{{e.roomEntity.number}}</td>
                         <td ng-if="$first" rowspan="{{e.alertEntityList.length == 0 ? 1: e.alertEntityList.length}}">{{e.roomEntity.description}}</td>
                         <td ng-if="$first" rowspan="{{e.alertEntityList.length == 0 ? 1 : e.alertEntityList.length}}">{{e.alertEntityList.length}}</td>
-                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5)}">{{getReadableDate(a.timestamp)}}</td>
-                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5)}">{{a.username}}</td>
-                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5)}">{{a.message}}</td>
+                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5) && a.status ==0, warning: filterByTimestamp(a.timestamp, 5) && a.status ==1}">{{getReadableDate(a.timestamp)}}
+                        </td>
+                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5) && a.status ==0, warning: filterByTimestamp(a.timestamp, 5) && a.status ==1}">{{a.username}}</td>
+                        <td ng-class="{blink: filterByTimestamp(a.timestamp, 5) && a.status ==0, warning: filterByTimestamp(a.timestamp, 5) && a.status ==1}">{{a.message}}</td>
                     </tr>
                     <tr ng-if="e.alertEntityList.length == 0">
-                        <td>{{e.roomEntity.number}}</td>
+                        <td>{{e.roomEntity.number}}</td>s
                         <td>{{e.roomEntity.description}}</td>
                         <td>{{e.alertEntityList.length}}</td>
                         <td></td>

@@ -29,6 +29,13 @@
                     <input type="text" class="form-control" id="inputDoctorSpecializare" ng-model="inputDoctorSpecializare" placeholder="specialization" required />
                 </div>
 
+                <!--<div class="form-group">-->
+                    <!--<label for="inputRole">User</label>-->
+                    <!--<select id="inputRole" ng-model="inputUserId" class="form-control" ng-required="true">-->
+                        <!--<option ng-repeat="ur in usersByRole" value={{ur.id}}>{{ur.username}}</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+
                 <button type="button" class="btn btn-primary" ng-click="addDoctor()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga doctor</button>
             </form>
         </fieldset>
@@ -43,6 +50,7 @@
                 <td data-title="'Email'" sortable="'email'">{{doc.email}}</td>
                 <td data-title="'Telefon'" sortable="'phoneNumber'" >{{doc.phoneNumber}}</td>
                 <td data-title="'Specializare'"sortable="'specialization'">{{doc.specialization}}</td>
+                <!--<td data-title="'Utilizator'"sortable="'username'">{{getUserById(doc.userId)}}</td>-->
                 <td data-title="'Actiuni'" ng-hide="hideAllActions()">
                     <button type="button" class="btn-xs btn-danger" ng-click="deleteDoctor(doc.id)" ng-hide="hideDelete()">Delete</button>
                 </td>

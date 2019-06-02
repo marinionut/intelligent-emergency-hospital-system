@@ -1,0 +1,159 @@
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<style>
+    .led-box {
+        height: 30px;
+        width: 25%;
+        margin: 10px 0;
+        float: left;
+    }
+
+    .led-box p {
+        font-size: 12px;
+        text-align: center;
+        margin: 1em;
+    }
+
+    .led-red {
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        background-color: #F00;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+        -webkit-animation: blinkRed 0.5s infinite;
+        -moz-animation: blinkRed 0.5s infinite;
+        -ms-animation: blinkRed 0.5s infinite;
+        -o-animation: blinkRed 0.5s infinite;
+        animation: blinkRed 0.5s infinite;
+    }
+
+    @-webkit-keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+    @-moz-keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+    @-ms-keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+    @-o-keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+    @keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+
+    .led-yellow {
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        background-color: #FF0;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;
+        -webkit-animation: blinkYellow 1s infinite;
+        -moz-animation: blinkYellow 1s infinite;
+        -ms-animation: blinkYellow 1s infinite;
+        -o-animation: blinkYellow 1s infinite;
+        animation: blinkYellow 1s infinite;
+    }
+
+    @-webkit-keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+    @-moz-keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+    @-ms-keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+    @-o-keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+    @keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+
+    .led-green {
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        background-color: #ABFF00;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+    }
+
+    .led-blue {
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        background-color: #24E0FF;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3F8CFF 0 2px 14px;
+    }
+</style>
+<div ng-controller="MedicalEquipmentCtrl" class="container" style="padding:10px 10px;">
+    <div class="container" style="padding:10px 10px;">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"></legend>
+
+            <form class="form-inline" ng-hide="hideAdd()">
+                <div class="form-group">
+                    <label for="inputMedicalEquipmentName">Denumire</label>
+                    <input type="text" class="form-control" id="inputMedicalEquipmentName" ng-model="inputMedicalEquipmentName" placeholder="denumire" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputMedicalEquipmentRoomNumber">Numbar camera</label>
+                    <input type="number" class="form-control" id="inputMedicalEquipmentRoomNumber" ng-model="inputMedicalEquipmentRoomNumber" placeholder="numar camera" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputMedicalEquipmentFloor">Etaj</label>
+                    <input type="number" class="form-control" id="inputMedicalEquipmentFloor" ng-model="inputMedicalEquipmentFloor" placeholder="etaj" required />
+                </div>
+
+                <button type="button" class="btn btn-primary" ng-click="addMedicalEquipment()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga echipament medical</button>
+            </form>
+        </fieldset>
+    </div>
+    <div class="container" style="padding:10px 10px;">
+        <button type="button" class="btn btn-primary" ng-click="getMedicalEquipment()">Refresh</button>
+    </div>
+    <div class="container" style="padding:10px 10px;">
+        <table ng-table="medicalEquipmentTable" class="table table-bordered table-striped table-hover" id="tbl_employees">
+            <tr ng-repeat="me in $data">
+                <td data-title="'#'"><span class="sn">{{(medicalEquipmentTable.page() - 1) * medicalEquipmentTable.count() + $index + 1}}</span>.</td>
+                <!--<td>{{doc.id}}</td>-->
+                <td data-title="'Denumire'" sortable="'name'">{{me.name}}</td>
+                <td data-title="'Numbar camera'" sortable="'roomNumber'">{{me.roomNumber}}</td>
+                <td data-title="'Etaj'" sortable="'floor'">{{me.floor}}</td>
+                <td data-title="'Status'" sortable="'status'">
+                    <div ng-class="{'led-green': me.status == false, 'led-red': me.status == true}"></div>
+                </td>
+                <td data-title="'Actiuni'" ng-hide="hideAllActions()">
+                    <button type="button" class="btn-xs btn-danger" ng-click="deleteMedicalEquipment(me.id)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

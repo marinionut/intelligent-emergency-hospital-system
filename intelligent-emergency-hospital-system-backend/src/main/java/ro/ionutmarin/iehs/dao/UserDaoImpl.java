@@ -52,4 +52,10 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
 //                .setParameter("role", role)
 //                .executeUpdate();
 //    }
+    @Override
+    public List<UserEntity> finByRole(String role) {
+        Criteria criteria = getSession().createCriteria(UserEntity.class);
+        criteria.add(Restrictions.eq("role", role));
+        return (List<UserEntity>) criteria.list();
+    }
 }

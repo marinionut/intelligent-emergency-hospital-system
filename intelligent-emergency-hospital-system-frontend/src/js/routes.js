@@ -54,6 +54,14 @@ angular.module('RDash')
                 url: '/emergencyMap',
                 templateUrl: 'templates/emergencyMap.html'
             })
+            .state('medicalEquipment', {
+                url: '/medicalEquipment',
+                templateUrl: 'templates/medicalEquipment.html'
+            })
+            .state('medicalEquipmentConsole', {
+                url: '/medicalEquipmentConsole',
+                templateUrl: 'templates/medicalEquipmentConsole.html'
+            })
             .state('doctor', {
                 url: '/doctor',
                 templateUrl: 'templates/doctor.html'
@@ -65,7 +73,7 @@ angular.module('RDash')
     function($rootScope, $state, $http, AuthService) {
         $rootScope.$on('$stateChangeStart', function (event, next) {
             if (!AuthService.isAuthenticated()) {
-              if (next.name !== 'login' && next.name !== 'register') {
+              if (next.name !== 'login' && next.name !== 'register' && next.name !== 'medicalEquipmentConsole') {
                 event.preventDefault();
                 $state.go('login');
               }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<style>
+    .led-box p {
+        font-size: 12px;
+        text-align: center;
+        margin: 1em;
+    }
+    .led-red {
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        background-color: #F00;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+        -webkit-animation: blinkRed 0.5s infinite;
+        -moz-animation: blinkRed 0.5s infinite;
+        -ms-animation: blinkRed 0.5s infinite;
+        -o-animation: blinkRed 0.5s infinite;
+        animation: blinkRed 0.5s infinite;
+    }
+
+    @-webkit-keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+    @-moz-keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+    @-ms-keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+    @-o-keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+    @keyframes blinkRed {
+        from { background-color: #F00; }
+        50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+        to { background-color: #F00; }
+    }
+
+    .led-yellow {
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        background-color: #FF0;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;
+        -webkit-animation: blinkYellow 1s infinite;
+        -moz-animation: blinkYellow 1s infinite;
+        -ms-animation: blinkYellow 1s infinite;
+        -o-animation: blinkYellow 1s infinite;
+        animation: blinkYellow 1s infinite;
+    }
+
+    @-webkit-keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+    @-moz-keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+    @-ms-keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+    @-o-keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+    @keyframes blinkYellow {
+        from { background-color: #FF0; }
+        50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
+        to { background-color: #FF0; }
+    }
+
+    .led-green {
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        background-color: #ABFF00;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+    }
+
+    .active, .inactive {font-size:40px;cursor:pointer;}
+    .active, .inactive {font-size:40px;cursor:pointer;}
+    i.active { color: #5cb85c}
+    i.inactive {color: #d9534f}
+</style>
+<div ng-controller="MedicalEquipmentCtrl" class="container" style="padding:10px 10px;">
+    <div class="container" style="padding:10px 10px;">
+    </div>
+    <div class="container" style="padding:10px 10px;">
+        <table ng-table="medicalEquipmentTable" class="table table-bordered table-striped table-hover" id="tbl_employees">
+            <tr ng-repeat="me in $data">
+                <td data-title="'#'"><span class="sn">{{(medicalEquipmentTable.page() - 1) * medicalEquipmentTable.count() + $index + 1}}</span>.</td>
+                <!--<td>{{doc.id}}</td>-->
+                <td data-title="'Denumire'" sortable="'name'">{{me.name}}</td>
+                <td data-title="'Numbar camera'" sortable="'roomNumber'">{{me.roomNumber}}</td>
+                <td data-title="'Etaj'" sortable="'floor'">{{me.floor}}</td>
+                <td data-title="'Status'" sortable="'status'">
+                    <div ng-class="{'led-green': me.status == false, 'led-red': me.status == true}"></div>
+                </td>
+                <td data-title="'Actiuni'">
+                    <div class="well">
+                        <i class="fa fa-toggle-on active" ng-if="me.status == true" ng-click="changeStatus(me.id, false)"></i>
+                        <i class="fa fa-toggle-on fa-rotate-180 inactive" ng-if="me.status == false" ng-click="changeStatus(me.id, true)"></i>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

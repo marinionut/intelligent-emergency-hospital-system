@@ -36,4 +36,12 @@ public class DoctorDaoImpl  extends AbstractDao implements DoctorDao {
         return doctorEntity;
     }
 
+    @Override
+    public int updateByUserId(int userId) {
+        return getSession()
+                .createQuery("update DoctorEntity d set d.userId=:value where d.userId=:userId")
+                .setInteger("userId", userId)
+                .setInteger("value", -1)
+                .executeUpdate();
+    }
 }

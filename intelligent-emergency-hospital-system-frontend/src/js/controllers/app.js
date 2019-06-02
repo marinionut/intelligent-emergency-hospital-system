@@ -33,34 +33,45 @@ function AlertsCtrl($scope, $rootScope, $http) {
         $("#greetings").html("");
     }
 
-    function connect() {
+    $scope.connectSocket = function connect() {
         var socket = new SockJS('http://localhost:8081/gs-guide-websocket');
         $rootScope.stompClient = Stomp.over(socket);
         //stompClient.connect("","",function (frame) {
         $rootScope.stompClient.connect({}, function (frame) {
             setConnected(true);
             console.log('Connected: ' + frame);
-            $rootScope.stompClient.subscribe('/topic/alerts', function (greeting) {
-                $scope.getAllAlerts();
-                alertify
-                    .alert('Alerta', JSON.parse(greeting.body).name);
-                showGreeting(JSON.parse(greeting.body).name);
-
-                $scope.getAllAlerts();
-                //showGreeting("2");
-            });
+            // $rootScope.stompClient.subscribe('/topic/alerts', function (greeting) {
+            //     $scope.getAllAlerts();
+            //     alertify
+            //         .alert('Alerta', JSON.parse(greeting.body).name);
+            //     showGreeting(JSON.parse(greeting.body).name);
+            //
+            //     $scope.getAllAlerts();
+            //     //showGreeting("2");
+            // });
             console.log("subscribing to " + '/topic/alerts/' + $rootScope.memberinfo.username);
-            $rootScope.stompClient.subscribe('/topic/alerts/' + $rootScope.memberinfo.username, function (greeting) {
-                alertify
-                    .alert('Alerta', JSON.parse(greeting.body).name);
-                showGreeting(JSON.parse(greeting.body).name);
+            $rootScope.stompClient.subscribe('/topic/alerts/' + $rootScope.memberinfo.username, function (alert) {
+                // alertify
+                //     .alert('Alerta',
+                //         JSON.parse(alert.body).message,
+                //         function(){
+                //             $scope.sendAlertId(JSON.parse(alert.body).username, JSON.parse(alert.body).uid);
+                //         }
+                alertify.confirm( JSON.parse(alert.body).message,
+                        function(){
+                            $scope.sendAlertId(JSON.parse(alert.body).username, JSON.parse(alert.body).uid);
+                        },function(){
+                            alertify.error('Declined');
+                        }).set({labels:{ok:'Accept', cancel: 'Decline'}, padding: false});
+                showGreeting(JSON.parse(alert.body).message);
 
                 $scope.getAllAlerts();
-                //showGreeting("2");
             });
             console.log('Subscribed');
         });
     }
+
+    $scope.connectSocket();
 
     function disconnect() {
         if ($rootScope.stompClient !== null) {
@@ -70,11 +81,26 @@ function AlertsCtrl($scope, $rootScope, $http) {
         console.log("Disconnected");
     }
 
-    function sendName() {
-        alert($("#name").val());
-        $rootScope.stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val()}));
-        $rootScope.stompClient.send("/hello", {}, JSON.stringify({'name': $("#name").val()}));
-    }
+    $scope.sendAlertId = function sendName(username, uid) {
+        //alert($("#name").val());
+         //$rootScope.stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val()}));
+         //$rootScope.stompClient.send("/app/hello", {}, JSON.stringify({'name': 'test'}));
+         //$rootScope.stompClient.send("/hello", {}, JSON.stringify({'name': $("#name").val()}));
+
+
+        var message ={
+            'username' : username,
+            'alertUid' : uid
+        };
+        $rootScope.stompClient.send("/app/alert/ack", {},
+            JSON.stringify({
+                    'username' : username,
+                    'alertUid' : uid
+                }));
+
+        //var alertAck = {alertId: 1, username: $rootScope.memberinfo.username };
+        //$rootScope.stompClient.send("/alertAck", {}, JSON.stringify(alertAck));
+    };
 
     function showGreeting(message) {
         $("#greetings").append("<tr><td>" + message + "</td></tr>");
@@ -85,13 +111,13 @@ function AlertsCtrl($scope, $rootScope, $http) {
             e.preventDefault();
         });
         $("#connect").click(function () {
-            connect();
+            $scope.connectSocket();
         });
         $("#disconnect").click(function () {
             disconnect();
         });
-        $("#send").click(function () {
-            sendName();
-        });
+        // $("#send").click(function () {
+        //     sendName();
+        // });
     });
 }

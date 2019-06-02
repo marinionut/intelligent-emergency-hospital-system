@@ -11,4 +11,5 @@ public interface UserDao {
     int deleteUser(int id);
     UserEntity findById(int id);
 //    int editUserRole(String username, int role);
+    List<UserEntity> finByRole(String role);
 }

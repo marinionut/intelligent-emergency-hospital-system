@@ -15,6 +15,8 @@ import ro.ionutmarin.iehs.model.Alert;
 
 import java.sql.Timestamp;
 
+import static ro.ionutmarin.iehs.util.Constants.ALERT_INITIALIZED;
+
 @Service
 public class AuditReceiver {
     private final Logger logger = LoggerFactory.getLogger(Receiver.class);
@@ -40,8 +42,11 @@ public class AuditReceiver {
         alertEntity.setTimestamp(new Timestamp(data.getTimestamp()));
         alertEntity.setType("notification + sms");
         alertEntity.setUsername(data.getUsername());
+        alertEntity.setStatus(ALERT_INITIALIZED);
+        alertEntity.setUid(data.getUid());
 
         alertDao.save(alertEntity);
+
 
         try {
             observer.notifyClientForUpdate();

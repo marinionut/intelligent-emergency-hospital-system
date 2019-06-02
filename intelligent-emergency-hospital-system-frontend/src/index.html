@@ -43,6 +43,7 @@
   <!-- endbuild -->
   <!--<link rel="shortcut icon" href="img/favicon.ico"/>-->
   <link rel="shortcut icon" href="img/hospital.png"/>
+  <link rel="manifest" href="../manifest.json"/>
   <!-- Custom Scripts -->
   <link rel="stylesheet"; href="https://unpkg.com/ng-table@3.0.1/bundles/ng-table.min.css">
   <script src="https://unpkg.com/ng-table@3.0.1//bundles/ng-table.min.js"></script>
@@ -58,7 +59,7 @@
 <body ng-controller="MasterCtrl" scroll="no" style="overflow: hidden">
   <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
     <!-- Sidebar -->
-    <div id="sidebar-wrapper">
+    <div id="sidebar-wrapper" ng-hide="hideForMedicalEquipmentConsole()">
       <ul class="sidebar">
         <li class="sidebar-main">
           <a ng-click="toggleSidebar()">
@@ -76,15 +77,15 @@
         </li>
 
         <li class="sidebar-list" ng-hide="memberinfo == null">
+          <a href="#!/room">Camere <span class="menu-icon fa fa-hospital-o"></span></a>
+        </li>
+
+        <li class="sidebar-list" ng-hide="memberinfo == null">
           <a href="#!/appointment">Internari <span class="menu-icon fa fa-stethoscope"></span></a>
         </li>
 
         <li class="sidebar-list" ng-hide="memberinfo == null">
-          <a href="#!/room">Camere <span class="menu-icon fa fa-hospital-o"></span></a>
-        </li>
-
-        <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'">
-          <a href="#!/users">Utilizatori <span class="menu-icon fa fa-users"></span></a>
+          <a href="#!/medicalEquipment">Echipamente<span class="menu-icon fa fa-medkit"></span></a>
         </li>
 
         <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'">
@@ -97,6 +98,10 @@
 
         <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'">
           <a href="#!/emergencyMap">Harta urgente<span class="menu-icon fa fa-map-marker" ng-hide="memberinfo == null"></span></a>
+        </li>
+
+        <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'">
+          <a href="#!/users">Utilizatori <span class="menu-icon fa fa-users"></span></a>
         </li>
       </ul>
       <div class="sidebar-footer">

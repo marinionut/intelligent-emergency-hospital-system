@@ -14,6 +14,8 @@ import ro.ionutmarin.iehs.model.Alert;
 
 import ro.ionutmarin.iehs.util.*;
 
+import java.util.UUID;
+
 @Service
 public class AlertService {
 
@@ -57,6 +59,7 @@ public class AlertService {
         alert.setAppointmentId(appointmentEntity.getId());
         alert.setTimestamp(DateTime.now().getMillis());
         alert.setToPhoneNumber(appointmentEntity.getDoctor().getPhoneNumber());
+        alert.setUid(UUID.randomUUID().toString());
 
         int userId = appointmentEntity.getDoctor().getUserId();
         if (Constants.NO_USER_ID == userId) {

@@ -10,4 +10,5 @@ public interface DoctorDao {
     List<DoctorEntity> findAll();
     void delete(int id);
     DoctorEntity findById(int id);
+    int updateByUserId(int userId);
 }

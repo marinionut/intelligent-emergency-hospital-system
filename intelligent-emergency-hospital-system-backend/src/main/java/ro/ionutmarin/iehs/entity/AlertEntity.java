@@ -39,15 +39,23 @@ public class AlertEntity {
     @Column(name = "roomNumber")
     private int roomNumber;
 
+    @Column(name = "status")
+    private int status;
+
+    @Column(name = "uid")
+    private String uid;
+
     public AlertEntity() {
     }
 
-    public AlertEntity(String username, String message, Timestamp timestamp, String type, int roomNumber) {
+    public AlertEntity(String username, String message, Timestamp timestamp, String type, int roomNumber, int status, String uid) {
         this.username = username;
         this.message = message;
         this.timestamp = timestamp;
         this.type = type;
         this.roomNumber = roomNumber;
+        this.status = status;
+        this.uid = uid;
     }
 
     public int getId() {
@@ -96,5 +104,21 @@ public class AlertEntity {
 
     public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }

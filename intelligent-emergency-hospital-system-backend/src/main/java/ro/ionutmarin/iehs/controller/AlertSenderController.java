@@ -15,6 +15,9 @@ import ro.ionutmarin.iehs.service.AlertService;
 import ro.ionutmarin.iehs.sms.SmsService;
 
 import java.sql.Timestamp;
+import java.util.UUID;
+
+import static ro.ionutmarin.iehs.util.Constants.ALERT_INITIALIZED;
 
 @RestController
 public class AlertSenderController {
@@ -45,7 +48,9 @@ public class AlertSenderController {
                 message,
                 new Timestamp(System.currentTimeMillis()),
                 ALERT_TYPE_NOTIFICATION,
-                roomNumber);
+                roomNumber,
+                ALERT_INITIALIZED,
+                UUID.randomUUID().toString());
         alertDao.save(alertEntity);
 
         this.template.convertAndSend("/topic/alerts/" + username, new HelloMessage(message));
@@ -59,7 +64,9 @@ public class AlertSenderController {
                 message,
                 new Timestamp(System.currentTimeMillis()),
                 ALERT_TYPE_NOTIFICATION,
-                roomNumber);
+                roomNumber,
+                ALERT_INITIALIZED,
+                UUID.randomUUID().toString());
         alertDao.save(alertEntity);
 
         template.convertAndSend("/topic/alerts/" + username, new HelloMessage(message));
@@ -74,7 +81,9 @@ public class AlertSenderController {
                 message,
                 new Timestamp(System.currentTimeMillis()),
                 ALERT_TYPE_SMS,
-                roomNumber);
+                roomNumber,
+                ALERT_INITIALIZED,
+                UUID.randomUUID().toString());
         alertDao.save(alertEntity);
 
         smsService.sendSms(phoneNumber, message);
@@ -85,4 +94,14 @@ public class AlertSenderController {
                               @RequestParam("bedNumber") int bedNumber) throws Exception {
         return alertService.resolveAlert(roomNumber, bedNumber);
     }
+
+
+//    @MessageMapping("/alertAck")
+//    // @SendTo("/topic/alerts")
+//    public String greeting(AlertAck alertAck) throws Exception {
+//        Thread.sleep(1000);
+//        System.out.println("Received ack from username: " + alertAck.getUsername()
+//                + "and alert with id:" + alertAck.getAlertId());
+//        return "dsafsadfsafdas";
+//    }
 }

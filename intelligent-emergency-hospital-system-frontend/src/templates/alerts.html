@@ -37,6 +37,9 @@
                 </table>
             </div>
         </div>
+        <div>
+            <button type="button" ng-click="sendAlertId('ionut', 1548373399000)">Click Me!</button>
+        </div>
         <div class="container" style="padding:10px 10px;">
 
             <table class="table table-bordered table-striped table-hover" id="tbl_employees">
@@ -45,6 +48,7 @@
                 <tr>
                     <th>#</th>
                     <th>Utilizator</th>
+                    <th>Status</th>
                     <th>Mesaj alerta</th>
                     <th>Timestamp</th>
                     <th>Tip</th>
@@ -54,6 +58,8 @@
                 <tr ng-repeat="a in alerts">
                     <td><span class="sn">{{$index + 1}}</span>.</td>
                     <td>{{a.username}}</td>
+                    <td ng-if="a.status == 1">Confirmta</td>
+                    <td ng-if="a.status == 0">Initializata</td>
                     <td>{{a.message}}</td>
                     <td>{{getDatetime(a.timestamp)}}</td>
                     <td>{{a.type}}</td>

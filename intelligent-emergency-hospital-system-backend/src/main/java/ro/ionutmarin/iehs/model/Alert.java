@@ -12,6 +12,7 @@ public class Alert {
     private String username;
     private long timestamp;
     private String toPhoneNumber;
+    private String uid;
 
     public Alert() {
     }
@@ -84,6 +85,14 @@ public class Alert {
         this.toPhoneNumber = toPhoneNumber;
     }
 
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
     @Override
     public String toString() {
         return "Alert{" +
@@ -95,6 +104,7 @@ public class Alert {
                 ", username='" + username + '\'' +
                 ", timestamp=" + timestamp +
                 ", toPhoneNumber='" + toPhoneNumber + '\'' +
+                ", uid='" + uid + '\'' +
                 '}';
     }
 }

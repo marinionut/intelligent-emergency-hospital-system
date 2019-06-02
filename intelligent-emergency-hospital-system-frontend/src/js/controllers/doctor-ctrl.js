@@ -11,6 +11,17 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
         return false;
     };
 
+    // $scope.usersByRole = [];
+    // $scope.getUsersByRole = function () {
+    //     $http({method: 'GET', url: 'http://localhost:8081/api/user/role?role=doctor'})
+    //         .then(function (response) {
+    //             $scope.usersByRole = response.data;
+    //             console.log($scope.usersByRole);
+    //     });
+    //
+    // };
+    // $scope.getUsersByRole();
+
     $scope.getDoctors = function () {
         $http({method: 'GET', url: 'http://localhost:8081/api/doctor/all'}).then(function (response) {
             $scope.doctors = response.data;
@@ -40,7 +51,8 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
             lastName: $scope.inputDoctorLastName,
             email: $scope.inputDoctorEmail,
             phoneNumber: $scope.inputDoctorTelefon,
-            specialization: $scope.inputDoctorSpecializare
+            specialization: $scope.inputDoctorSpecializare,
+            userId: $scope.inputUserId
         };
 
         // alert(newVM.vmName + " " + newVM.zone + " " + newVM.image);
@@ -62,6 +74,7 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
                 $scope.inputDoctorEmail = "";
                 $scope.inputDoctorTelefon = "";
                 $scope.inputDoctorSpecializare = "";
+                $scope.inputUserId = "";
             } else if (response.status == 500) {
                 $scope.failMessage = response.data;
                 window.alert($scope.failMessage);
@@ -81,6 +94,21 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
         });
 
     };
+
+    $scope.getUserById = function (id) {
+        if (id === -1) {
+            return "nedefinit";
+        } else {
+            $http({
+                method: 'GET',
+                url: 'http://localhost:8081/api/user?id=' + id
+            }).then(function (response) {
+                console.log(response.data);
+                return response.data.username;
+            });
+        }
+    }
+
 
     $scope.hideDelete = function () {
         if ($rootScope.memberinfo.role == "doctor")

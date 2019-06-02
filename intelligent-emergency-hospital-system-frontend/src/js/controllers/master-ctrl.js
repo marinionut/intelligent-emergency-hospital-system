@@ -3,9 +3,9 @@
  */
 
 angular.module('RDash')
-    .controller('MasterCtrl', ['$scope', '$cookieStore', '$rootScope', '$http', '$state', 'AuthService', 'AUTH', MasterCtrl]);
+    .controller('MasterCtrl', ['$scope', '$cookieStore', '$rootScope', '$http', '$state', '$location', 'AuthService', 'AUTH', MasterCtrl]);
 
-function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, AuthService, AUTH) {
+function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, $location, AuthService, AUTH) {
     /**
      * Sidebar Toggle & Cookie Control
      */
@@ -39,10 +39,10 @@ function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, AuthService
 
     $scope.logout = function(){
         AuthService.logout();
-        if ($rootScope.stompClient !== null) {
-            $rootScope.stompClient.disconnect();
-            console.log("disconected from topic.")
-        }
+        // if ($rootScope.stompClient !== null) {
+        //     $rootScope.stompClient.disconnect();
+        //     console.log("disconected from topic.")
+        // }
         $rootScope.memberinfo = undefined;
         $state.go('login');
     };
@@ -93,8 +93,17 @@ function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, AuthService
             $scope.pageName = "Rapoarte";
         } else if(next.name === 'emergencyMap') {
             $scope.pageName = "Harta urgente";
+        } else if(next.name === 'medicalEquipment') {
+            $scope.pageName = "Echipament";
         } else {
             $scope.pageName = "";
         }
     });
+
+    $scope.hideForMedicalEquipmentConsole = function() {
+        console.log($location.path());
+        if ($location.path() == '/medicalEquipmentConsole')
+            return true;
+        return false;
+    }
 }

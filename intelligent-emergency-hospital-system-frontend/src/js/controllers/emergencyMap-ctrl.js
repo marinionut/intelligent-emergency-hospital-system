@@ -22,6 +22,7 @@ function EmergencyMapCtrl($scope, $rootScope, $window, $http, $q, $interval, $fi
         return new Date(millis);
     }
 
+
     $scope.filterByTimestamp = function(timestamp, minutes)
     {
         var d = new Date();

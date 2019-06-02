@@ -1,0 +1,13 @@
+{
+  "name": "Your Great Site",
+  "short_name": "Site 😎",
+  "description": "Learn how to create and share something or other.",
+  "start_url": "/login",
+  "background_color": "#000000",
+  "theme_color": "#0f4a73",
+  "icons": [{
+    "src": "icon-256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }]
+}
