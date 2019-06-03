@@ -17,5 +17,7 @@ public class StaticFilesConfig implements WebMvcConfigurer {
 
             registry.addResourceHandler("/js/**")
                     .addResourceLocations("classpath:/templates/js/");
+        registry.addResourceHandler("/templates/**")
+                .addResourceLocations("classpath:/templates/");
     }
 }
