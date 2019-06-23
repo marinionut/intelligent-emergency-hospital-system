@@ -13,6 +13,7 @@ import ro.ionutmarin.iehs.entity.UserEntity;
 import ro.ionutmarin.iehs.request.LoginRequest;
 import ro.ionutmarin.iehs.response.LoginResponse;
 import ro.ionutmarin.iehs.service.AuthService;
+import ro.ionutmarin.iehs.util.PasswordUtil;
 
 import java.util.List;
 
@@ -47,12 +48,11 @@ public class LoginController {
         }
 
         List<UserEntity> users = userDao.findByUsername(loginRequest.getUsername());
-        if (users.get(0).getParola().equals(loginRequest.getPassword())) {
+        if (PasswordUtil.matchingPassword(users.get(0).getParola(), loginRequest.getPassword())) {
             loginResponse.setSuccess(Boolean.TRUE);
             loginResponse.setMsg(new Gson().toJson(users.get(0)));
 
             return  ResponseEntity.ok(loginResponse);
-
         } else {
             loginResponse.setSuccess(Boolean.FALSE);
             loginResponse.setMsg("Nume utilizator inexistent!");

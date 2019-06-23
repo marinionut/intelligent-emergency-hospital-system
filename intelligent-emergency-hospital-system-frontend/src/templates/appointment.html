@@ -20,16 +20,18 @@
                 </div>
                 <div class="form-group">
                     <label for="inputRoomId">Camera</label>
-                    <select id="inputRoomId" ng-model="inputRoom" class="form-control" ng-required="true">
+                    <select id="inputRoomId" ng-model="inputRoom" class="form-control" ng-required="true" ng-change="getFreeBedsByRoomId(inputRoom)">
                         <option ng-repeat="r in rooms" value="{{r.id}}">{{r.number}}</option>
                     </select>
+                    <!--<select id="inputRoomId" ng-model="inputRoom" ng-required="true" class="form-control" -->
+                            <!--ng-options="size as size.name for size in sizes"  ng-change=getFreeBedsByRoomId(inputRoom)"></select>-->
                 </div>
                 <div class="form-group">
                     <label for="inputBedNumberId">Numar Pat</label>
-                    <input id="inputBedNumberId" ng-model="inputBedNumber" class="form-control" ng-required="true"/>
-                    <!--<select id="inputBedNumberId" ng-model="inputBedNumber" class="form-control" ng-required="true">-->
-                        <!--<option ng-repeat="number in rooms" value="{{r.id}}">{{r.number}}</option>-->
-                    <!--</select>-->
+                    <!--<input id="inputBedNumberId" ng-model="inputBedNumber" class="form-control" ng-required="true"/>-->
+                    <select id="inputBedNumberId" ng-model="inputBedNumber" class="form-control" ng-required="true">
+                        <option ng-repeat="bn in freeBedsByRoomId" value="{{bn}}">{{bn}}</option>
+                    </select>
                 </div>
 
                 <button type="button" class="btn btn-primary" ng-click="addAppointment()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga internare</button>
@@ -45,7 +47,7 @@
                     <td data-title="'Pacient'">{{app.patient.firstName}} {{app.patient.lastName}}</td>
                     <td data-title="'Camera'">{{app.room.number}} - {{app.room.description}}</td>
                     <td data-title="'Pat'">{{app.room.bedNumber}}</td>
-                    <td data-title="'Actiuni'" ng-hide="hideAllActions()">
+                    <td data-title="'Actiuni'">
                         <button type="button" class="btn-xs btn-danger" ng-click="deleteAppointment(app.id)" ng-hide="hideDelete()">Delete</button>
                     </td>
                 </tr>

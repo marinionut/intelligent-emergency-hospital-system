@@ -1,5 +1,6 @@
 package ro.ionutmarin.iehs.controller;
 
+import com.google.common.base.Predicates;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,7 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import ro.ionutmarin.iehs.dao.*;
 import ro.ionutmarin.iehs.entity.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/api")
@@ -29,6 +34,9 @@ public class HospitalManagementController {
 
     @Autowired
     private AlertDao alertDao;
+
+    @Autowired
+    private UserDao userDao;
 
     @RequestMapping("/patient/all")
     public List<PatientEntity> getPatient() {
@@ -60,10 +68,30 @@ public class HospitalManagementController {
         }
     }
 
+    @RequestMapping("/doctor/available-users")
+    public List<UserEntity> getAvailableUsers() {
+        List<UserEntity> usedUsers = doctorDao.findAll().stream()
+                .map(d -> {
+            return d.getUserEntity();
+        }).filter(Objects::nonNull)
+                .collect(Collectors.toList());
+
+        List<Integer> usersIds = usedUsers.stream()
+                .map(uu -> {
+                    return uu.getId();
+                })
+                .collect(Collectors.toList());
+
+        return userDao.findAllUsers().stream()
+                .filter(u -> !usersIds.contains(u.getId()))
+                .collect(Collectors.toList());
+    }
+
     @RequestMapping("/doctor/all")
     public List<DoctorEntity> getDoctor() {
         return doctorDao.findAll();
     }
+
 
     @RequestMapping("/doctor")
     public DoctorEntity getDoctorById(@RequestParam("id") int id) {
@@ -148,6 +176,24 @@ public class HospitalManagementController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
+    }
+
+    @RequestMapping("/room/bed/available")
+    public List<Integer> getAvailableBedByRoomId(int roomId) {
+        List<Integer> usedBedByRoom = appointmentDao.findAll()
+                .stream()
+                .filter(a -> {
+                    return a.getRoomId() == roomId;
+                })
+                .map(a -> {return a.getBedNumber();})
+                .collect(Collectors.toList());
+
+        List<Integer> freeBedsByRoom =  Stream.iterate(1, n -> n + 1)
+                .limit(roomDao.findById(roomId).getBedNumber())
+                .collect(Collectors.toList());
+
+        freeBedsByRoom.removeAll(usedBedByRoom);
+        return freeBedsByRoom;
     }
 
     @RequestMapping("/alert/all")

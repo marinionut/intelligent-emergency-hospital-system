@@ -93,16 +93,8 @@ public class AlertSenderController {
     @RequestMapping(value ="/resolveAlert")
     public Alert resolveAlert(@RequestParam("roomNumber") int roomNumber,
                               @RequestParam("bedNumber") int bedNumber) throws Exception {
+        System.out.println("received alert- room:" + roomNumber + " bed " + bedNumber);
         return alertService.resolveAlert(roomNumber, bedNumber);
     }
 
-
-//    @MessageMapping("/alertAck")
-//    // @SendTo("/topic/alerts")
-//    public String greeting(AlertAck alertAck) throws Exception {
-//        Thread.sleep(1000);
-//        System.out.println("Received ack from username: " + alertAck.getUsername()
-//                + "and alert with id:" + alertAck.getAlertId());
-//        return "dsafsadfsafdas";
-//    }
 }

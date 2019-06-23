@@ -1,26 +1,16 @@
 angular.module('RDash')
-    .controller('DoctorCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'leafletData', 'FileSaver', 'NgTableParams', DoctorCtrl]);
+    .controller('DoctorCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'NgTableParams', DoctorCtrl]);
 
-function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, leafletData, FileSaver, NgTableParams) {
+function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, NgTableParams) {
     $scope.doctors = [];
     $scope.failMessage = "";
 
     $scope.hideAllActions = function() {
-        if ($rootScope.memberinfo.role == "read")
+        if ($rootScope.memberinfo.role != "admin")
             return true;
         return false;
     };
 
-    // $scope.usersByRole = [];
-    // $scope.getUsersByRole = function () {
-    //     $http({method: 'GET', url: 'http://localhost:8081/api/user/role?role=doctor'})
-    //         .then(function (response) {
-    //             $scope.usersByRole = response.data;
-    //             console.log($scope.usersByRole);
-    //     });
-    //
-    // };
-    // $scope.getUsersByRole();
 
     $scope.getDoctors = function () {
         $http({method: 'GET', url: 'http://localhost:8081/api/doctor/all'}).then(function (response) {
@@ -52,7 +42,7 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
             email: $scope.inputDoctorEmail,
             phoneNumber: $scope.inputDoctorTelefon,
             specialization: $scope.inputDoctorSpecializare,
-            userId: $scope.inputUserId
+            userId: $scope.inputDoctorUser
         };
 
         // alert(newVM.vmName + " " + newVM.zone + " " + newVM.image);
@@ -75,6 +65,9 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
                 $scope.inputDoctorTelefon = "";
                 $scope.inputDoctorSpecializare = "";
                 $scope.inputUserId = "";
+                $scope.inputDoctorUser ="";
+
+                $scope.getAvailableUsers();
             } else if (response.status == 500) {
                 $scope.failMessage = response.data;
                 window.alert($scope.failMessage);
@@ -95,14 +88,28 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
 
     };
 
+    $scope.availableUsers  =[];
+
+    $scope.getAvailableUsers = function () {
+        $http({
+            method: 'GET',
+            url: 'http://localhost:8081/api/doctor/available-users'
+        }).then(function (response) {
+            console.log(response.data);
+            $scope.availableUsers =response.data;
+        });
+    };
+    $scope.getAvailableUsers();
+
     $scope.getUserById = function (id) {
         if (id === -1) {
-            return "nedefinit";
+            return "-nedefinit-";
         } else {
             $http({
                 method: 'GET',
                 url: 'http://localhost:8081/api/user?id=' + id
             }).then(function (response) {
+                console.log("raspuns getUser by id:");
                 console.log(response.data);
                 return response.data.username;
             });

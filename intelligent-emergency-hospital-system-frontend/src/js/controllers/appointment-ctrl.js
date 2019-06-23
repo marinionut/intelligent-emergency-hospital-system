@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('AppointmentCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'leafletData', 'FileSaver', 'NgTableParams', AppointmentCtrl]);
+    .controller('AppointmentCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'NgTableParams', AppointmentCtrl]);
 
-function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, leafletData, FileSaver, NgTableParams) {
+function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, NgTableParams) {
     $scope.appointments = [];
     $scope.full = [];
     $scope.doctors = [];
@@ -25,6 +25,18 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
     };
     $scope.getDoctors();
 
+    $scope.freeBedsByRoomId = [];
+
+    $scope.getFreeBedsByRoomId = function (id) {
+        console.log("trying to get free beds by room with roomId" + id);
+        if (id !== undefined && id != null && id !== "")
+            $http({
+                method: 'GET',
+                url: 'http://localhost:8081/api/room/bed/available?roomId=' + id
+            }).then(function (response) {
+                $scope.freeBedsByRoomId = response.data;
+            });
+    };
 
     $scope.getPatient = function (id) {
         $http({
@@ -131,5 +143,15 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
             $scope.getAppointments();
         });
 
+    };
+
+    $scope.hideDelete = function () {
+        if ($rootScope.memberinfo.role == "doctor")
+            return true;
+        if ($rootScope.memberinfo.role == "guest")
+            return true;
+        if ($rootScope.memberinfo.role == "admin")
+            return false;
+        return false;
     };
 }

@@ -31,12 +31,17 @@
     .warning {
         animation: blinking-warning 1s infinite;
     }
+    .ajs-message { color: #31708f;  background-color: #d9edf7;  border-color: #31708f; }
+    .ajs-message.ajs-custom { color: #31708f;  background-color: #d9edf7;  border-color: #31708f; }
 </style>
 <div ng-controller="EmergencyMapCtrl" class="container" style="padding:10px 10px;">
         <div class="container" style="padding:10px 10px;">
-            <label for="alertInput">Alegeti o data de inceput pentru alerte:</label>
-            <input type="date" id="alertInput" name="input" ng-model="alertStartDate" ng-change="getEmergencies(alertStartDate)"
-                   placeholder="dd-MM-yyyy" min="2019-01-01" required value="getToday()" data-ng-init="getEmergencies()"/>
+            <div class="input-group date">
+                    <label for="alertDateInput">Alegeti o data de inceput pentru alerte:  </label>
+                    <input class="form-control" type="date" id="alertDateInput" name="input" ng-model="alertStartDate" ng-change="getEmergencies(alertStartDate)"
+                           placeholder="dd-MM-yyyy" min="2019-01-01" required value="getToday()" data-ng-init="getEmergencies()"/>
+            </div>
+            <br/>
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
@@ -59,7 +64,7 @@
                         <td ng-class="{blink: filterByTimestamp(a.timestamp, 5) && a.status ==0, warning: filterByTimestamp(a.timestamp, 5) && a.status ==1}">{{a.message}}</td>
                     </tr>
                     <tr ng-if="e.alertEntityList.length == 0">
-                        <td>{{e.roomEntity.number}}</td>s
+                        <td>{{e.roomEntity.number}}</td>
                         <td>{{e.roomEntity.description}}</td>
                         <td>{{e.alertEntityList.length}}</td>
                         <td></td>

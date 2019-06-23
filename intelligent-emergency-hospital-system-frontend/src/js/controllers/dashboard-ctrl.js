@@ -1,12 +1,12 @@
 angular.module('RDash')
-	.controller('DashboardCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', 'leafletData', 'FileSaver', DashboardCtrl]);
+	.controller('DashboardCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', DashboardCtrl]);
 
-function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval, leafletData, FileSaver) {
+function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval) {
     $scope.virtualMachines = [];
     $scope.failMessage = "";
 
     $scope.hideAdd = function () {
-        if ($rootScope.memberinfo.role == "read")
+        if ($rootScope.memberinfo.role == "guest")
             return true;
         if ($rootScope.memberinfo.role == "partial")
             return true;
@@ -18,7 +18,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval, leafle
     };
 
     $scope.hideStart = function () {
-        if ($rootScope.memberinfo.role == "read")
+        if ($rootScope.memberinfo.role == "guest")
             return true;
         if ($rootScope.memberinfo.role == "partial")
             return false;
@@ -30,7 +30,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval, leafle
     };
 
     $scope.hideStop = function () {
-        if ($rootScope.memberinfo.role == "read")
+        if ($rootScope.memberinfo.role == "ge")
             return true;
         if ($rootScope.memberinfo.role == "partial")
             return false;

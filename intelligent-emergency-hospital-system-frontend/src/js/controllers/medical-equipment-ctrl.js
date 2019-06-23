@@ -6,7 +6,7 @@ function MedicalEquipmentCtrl($scope, $rootScope, $window, $http, $q, $filter, N
     $scope.failMessage = "";
 
     $scope.hideAllActions = function() {
-        if ($rootScope.memberinfo.role == "read")
+        if ($rootScope.memberinfo.role == "guest")
             return true;
         return false;
     };
@@ -75,7 +75,7 @@ function MedicalEquipmentCtrl($scope, $rootScope, $window, $http, $q, $filter, N
     $scope.hideDelete = function () {
         if ($rootScope.memberinfo.role == "doctor")
             return true;
-        if ($rootScope.memberinfo.role == "doctorstuff")
+        if ($rootScope.memberinfo.role == "guest")
             return true;
         if ($rootScope.memberinfo.role == "admin")
             return false;

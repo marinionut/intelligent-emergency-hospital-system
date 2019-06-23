@@ -5,7 +5,7 @@ create table if not exists alert
 	id int auto_increment,
 	username varchar(20) null,
 	message varchar(2500) null,
-	type varchar(20) null,
+	alert_type varchar(20) null,
 	timestamp timestamp null,
 	roomNumber int null,
 	status int default 0 null,
@@ -25,7 +25,7 @@ create table if not exists doctor
 	email varchar(30) not null,
 	phone_number varchar(20) not null,
 	specialization varchar(30) not null,
-	user_id int default -1 null,
+	user_id int null,
 	constraint doctor_id_uindex
 		unique (id)
 );
@@ -134,7 +134,7 @@ create table if not exists users
 (
 	id int auto_increment,
 	username varchar(20) null,
-	password varchar(20) null,
+	password varchar(2000) null,
 	role varchar(20) null,
 	constraint users_id_uindex
 		unique (id)
@@ -142,5 +142,4 @@ create table if not exists users
 
 alter table users
 	add primary key (id);
-
 

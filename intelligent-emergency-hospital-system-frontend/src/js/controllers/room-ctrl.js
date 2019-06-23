@@ -1,12 +1,12 @@
 angular.module('RDash')
-    .controller('RoomCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'leafletData', 'FileSaver', 'NgTableParams', RoomCtrl]);
+    .controller('RoomCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'NgTableParams', RoomCtrl]);
 
-function RoomCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, leafletData, FileSaver, NgTableParams) {
+function RoomCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, NgTableParams) {
     $scope.rooms = [];
     $scope.failMessage = "";
 
     $scope.hideAllActions = function() {
-        if ($rootScope.memberinfo.role == "read")
+        if ($rootScope.memberinfo.role != "admin")
             return true;
         return false;
     };

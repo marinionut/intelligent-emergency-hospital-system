@@ -10,6 +10,7 @@ import ro.ionutmarin.iehs.dao.UserDao;
 import ro.ionutmarin.iehs.entity.UserEntity;
 import ro.ionutmarin.iehs.request.UserRequest;
 import ro.ionutmarin.iehs.service.AuthService;
+import ro.ionutmarin.iehs.util.PasswordUtil;
 
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class UserController {
     public ResponseEntity addUser(@RequestBody UserRequest request, @RequestHeader HttpHeaders headers) {
         UserEntity user = new UserEntity();
         user.setUsername(request.getUsername());
-        user.setParola(request.getPassword());
+        user.setParola(PasswordUtil.hashPassword(request.getPassword()));
         user.setRole(request.getRole());
 
         try {

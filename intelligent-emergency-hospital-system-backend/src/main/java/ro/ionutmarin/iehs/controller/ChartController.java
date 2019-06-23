@@ -87,4 +87,15 @@ public class ChartController {
         System.out.println(alertsByRoom);
         return alertsByRoom;
     }
+
+    @RequestMapping(value = "/alertsCalendar")
+    public Map<String, Long> getAlertsCalendar() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Map<String, Long> alertsCalendar = alertDao.findAll()
+                .stream()
+                .collect(groupingBy(alert -> sdf.format(new Date(alert.getTimestamp().getTime())), counting()));
+
+        System.out.println(alertsCalendar);
+        return alertsCalendar;
+    }
 }

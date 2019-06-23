@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<style>
+    .hidetext { -webkit-text-security: disc; /* Default */ }
+</style>
 <div ng-controller="UsersCtrl" class="container" style="padding:10px 10px;">
 <div class="container" style="padding:10px 10px;">
     <fieldset class="scheduler-border">
@@ -34,9 +37,11 @@
         <tr ng-repeat="user in $data">
             <td data-title="'#'"><span class="sn">{{(usersTable.page() - 1) * usersTable.count() + $index + 1}}</span>.</td>
             <td data-title="'Username'" sortable="'username'" >{{user.username}}</td>
-            <td class="hidetext" data-title="'Password'" sortable="'password'">{{user.password}}</td>
+            <td class="hidetext" data-title="'Password'">{{user.password}}</td>
             <td data-title="'Role'" sortable="'role'">{{user.role}}</td>
-            <td data-title="'Actions'"><a class="btn btn-xs delete-record" ng-click="deleteUser(user.id)"><i class="glyphicon glyphicon-trash"></i></a></td>
+            <td data-title="'Actions'">
+                <a class="btn btn-xs delete-record" ng-click="deleteUser(user.id)"><i class="glyphicon glyphicon-trash"></i></a>
+            </td>
         </tr>
     </table>
 </div>

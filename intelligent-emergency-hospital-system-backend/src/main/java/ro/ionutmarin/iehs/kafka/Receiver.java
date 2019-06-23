@@ -33,16 +33,20 @@ public class Receiver {
                         @Headers MessageHeaders headers) {
         logger.info("$$ Business consumer -> received data='{}'", data);
         try {
-            smsService.sendSms(data.getToPhoneNumber(), data.getMessage());
+            logger.info("$$ Business consumer -> prepare to send sms alert");
+            //smsService.sendSms(data.getToPhoneNumber(), data.getMessage());
         } catch (Exception e) {
-            System.out.println("\n\n\nEEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!");
+            logger.error("----------EEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!", e);
+            System.out.println("----------EEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!");
             System.out.println(e);
         }
 
         try {
+            logger.info("$$ Business consumer -> prepare to send web alert");
             template.convertAndSend("/topic/alerts/" + data.getUsername(), data);
         }  catch (Exception e) {
-            System.out.println("\n\n\nEEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!");
+            logger.error("----------EEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!", e);
+            System.out.println("----------EEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!");
             System.out.println(e);
         }
     }

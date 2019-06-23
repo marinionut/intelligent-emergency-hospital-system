@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('EmergencyMapCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'leafletData', 'FileSaver', 'NgTableParams', EmergencyMapCtrl]);
+    .controller('EmergencyMapCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'NgTableParams', EmergencyMapCtrl]);
 
-function EmergencyMapCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, leafletData, FileSaver, NgTableParams) {
+function EmergencyMapCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, NgTableParams) {
     $scope.emergencies = [];
     $scope.failMessage = "";
     $scope.alertStartDate = moment().format('DD-MM-YYYY');
@@ -67,10 +67,7 @@ function EmergencyMapCtrl($scope, $rootScope, $window, $http, $q, $interval, $fi
             console.log("reloading emergencies...");
             $scope.getEmergencies($scope.alertStartDate);
 
-            // var notification = alertify.notify('sample', 'success', 5, function(){  console.log('dismissed'); });
-            var notification = alertify.message('A aparut o noua alerta!', 10, function () {
-                console.log('notification dismissed');
-            });
+            alertify.error('A aparut o noua alerta in sistem!');
         };
     } else {
         alert('SSE not supported by this browser');

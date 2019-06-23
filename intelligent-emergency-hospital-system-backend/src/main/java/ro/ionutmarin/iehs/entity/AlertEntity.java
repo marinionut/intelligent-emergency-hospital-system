@@ -33,7 +33,7 @@ public class AlertEntity {
     @Column(name = "timestamp")
     private Timestamp timestamp;
 
-    @Column(name = "type")
+    @Column(name = "alert_type")
     private String type;
 
     @Column(name = "roomNumber")

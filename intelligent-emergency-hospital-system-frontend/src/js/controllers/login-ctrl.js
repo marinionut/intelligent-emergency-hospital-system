@@ -11,6 +11,7 @@ function LoginCtrl($scope, $rootScope, $state, AuthService) {
 			$scope.failMessage = "";
 			$scope.successMessage = "";
 			$state.go('index');
+			$rootScope.connectSocket();
 		}, function(errMsg){
 			$scope.failMessage = errMsg;
 		});

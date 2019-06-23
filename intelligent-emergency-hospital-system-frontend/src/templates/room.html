@@ -3,10 +3,10 @@
     <div class="container" style="padding:10px 10px;">
         <fieldset class="scheduler-border">
             <legend class="scheduler-border"></legend>
-            <form class="form-inline" ng-hide="hideAdd()">
+            <form class="form-inline" ng-hide="hideAllActions()">
                 <div class="form-group">
                     <label for="inputRoomNumber">Numar</label>
-                    <input type="text" class="form-control" id="inputRoomNumber" ng-model="inputRoomNumber" placeholder="numar" required />
+                    <input type="number" class="form-control" id="inputRoomNumber" ng-model="inputRoomNumber" placeholder="numar" required />
                 </div>
 
                 <div class="form-group">
@@ -16,7 +16,7 @@
 
                 <div class="form-group">
                     <label for="inputRoomBedNumber">Numar de paturi</label>
-                    <input type="text" class="form-control" id="inputRoomBedNumber" ng-model="inputRoomBedNumber" placeholder="numar de paturi" required />
+                    <input type="number" class="form-control" id="inputRoomBedNumber" ng-model="inputRoomBedNumber" placeholder="numar de paturi" required />
                 </div>
 
                 <button type="button" class="btn btn-primary" ng-click="addRoom()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga camera</button>
@@ -31,7 +31,7 @@
                 <td data-title="'Numar'" sortable="'number'">{{r.number}}</td>
                 <td data-title="'Descriere'" sortable="'description'">{{r.description}}</td>
                 <td data-title="'Numar paturi'" sortable="'bedNumber'">{{r.bedNumber}}</td>
-                <td data-title="'Actiuni'" ng-hide="hideAllActions()">
+                <td data-title="'Actiuni'">
                     <button type="button" class="btn-xs btn-danger" ng-click="deleteRoom(r.id)" ng-hide="hideDelete()">Delete</button>
                 </td>
             </tr>

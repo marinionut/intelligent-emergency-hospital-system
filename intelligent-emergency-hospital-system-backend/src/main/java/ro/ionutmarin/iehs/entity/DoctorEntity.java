@@ -4,6 +4,8 @@ package ro.ionutmarin.iehs.entity;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
 
@@ -41,6 +43,11 @@ public class DoctorEntity {
 
         @Column(name = "user_id")
         private int  userId;
+
+        @NotFound(action=NotFoundAction.IGNORE)
+        @JoinColumn(name = "user_id", updatable=false, insertable=false)
+        @OneToOne(targetEntity = UserEntity.class, fetch = FetchType.EAGER)
+        private UserEntity userEntity;
 
         public int getId() {
                 return id;
@@ -96,5 +103,13 @@ public class DoctorEntity {
 
         public void setUserId(int userId) {
                 this.userId = userId;
+        }
+
+        public UserEntity getUserEntity() {
+                return userEntity;
+        }
+
+        public void setUserEntity(UserEntity userEntity) {
+                this.userEntity = userEntity;
         }
 }

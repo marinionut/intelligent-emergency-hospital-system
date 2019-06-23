@@ -39,10 +39,6 @@ function MasterCtrl($scope, $cookieStore, $rootScope, $http, $state, $location, 
 
     $scope.logout = function(){
         AuthService.logout();
-        // if ($rootScope.stompClient !== null) {
-        //     $rootScope.stompClient.disconnect();
-        //     console.log("disconected from topic.")
-        // }
         $rootScope.memberinfo = undefined;
         $state.go('login');
     };

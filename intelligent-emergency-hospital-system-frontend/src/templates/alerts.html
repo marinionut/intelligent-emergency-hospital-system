@@ -1,70 +1,17 @@
-<div ng-controller="AlertsCtrl">
-    <noscript><h2>Seems your browser doesn't support Javascript! Websocket relies on Javascript being
-        enabled. Please enable
-        Javascript and reload this page!</h2></noscript>
-    <div id="main-content" class="container" style="padding:10px 10px;">
-        <div class="row">
-            <div class="col-md-6">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <label for="connect">Alerte Web:</label>
-                        <button id="connect" class="btn btn-default" type="submit">Conectare</button>
-                        <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Deconectare
-                        </button>
-                    </div>
-                </form>
-            </div>
-            <!--<div class="col-md-6">-->
-                <!--<form class="form-inline">-->
-                    <!--<div class="form-group">-->
-                        <!--<label for="name">What is your name?</label>-->
-                        <!--<input type="text" id="name" class="form-control" placeholder="Your name here...">-->
-                    <!--</div>-->
-                    <!--<button id="send" class="btn btn-default" type="submit">Send</button>-->
-                <!--</form>-->
-            <!--</div>-->
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table id="conversation" class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>Alerte in timp real</th>
-                    </tr>
-                    </thead>
-                    <tbody id="greetings">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div>
-            <button type="button" ng-click="sendAlertId('ionut', 1548373399000)">Click Me!</button>
-        </div>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"/>
+<div ng-controller="AlertsCtrl" class="container" style="padding:10px 10px;" >
+    <div class="container" style="padding:10px 10px;">
         <div class="container" style="padding:10px 10px;">
-
-            <table class="table table-bordered table-striped table-hover" id="tbl_employees">
-                <thead>
-                <th>Istoric alerte</th>
-                <tr>
-                    <th>#</th>
-                    <th>Utilizator</th>
-                    <th>Status</th>
-                    <th>Mesaj alerta</th>
-                    <th>Timestamp</th>
-                    <th>Tip</th>
+            <table ng-table="alertsTable" class="table table-bordered table-striped table-hover">
+                <tr ng-repeat="a in $data">
+                    <td data-title="'#'"><span class="sn">{{(alertsTable.page() - 1) * alertsTable.count() + $index + 1}}</span>.</td>
+                    <!--<td>{{doc.id}}</td>-->
+                    <td data-title="'Utilizator'" sortable="'username'">{{a.username}}</td>
+                    <td data-title="'Status'" sortable="'status'">{{a.status == 1 ? 'Confirmata' : 'Initilizata'}}</td>
+                    <td data-title="'Mesaj alerta'" sortable="'message'">{{a.message}}</td>
+                    <td data-title="'Tip'" sortable="'status'">{{a.type}}</td>
+                    <td data-title="'Timestamp'" sortable="'timestamp'">{{getDatetime(a.timestamp)}}</td>
                 </tr>
-                </thead>
-                <tbody id="tbl_posts_body">
-                <tr ng-repeat="a in alerts">
-                    <td><span class="sn">{{$index + 1}}</span>.</td>
-                    <td>{{a.username}}</td>
-                    <td ng-if="a.status == 1">Confirmta</td>
-                    <td ng-if="a.status == 0">Initializata</td>
-                    <td>{{a.message}}</td>
-                    <td>{{getDatetime(a.timestamp)}}</td>
-                    <td>{{a.type}}</td>
-                </tr>
-                </tbody>
             </table>
         </div>
     </div>

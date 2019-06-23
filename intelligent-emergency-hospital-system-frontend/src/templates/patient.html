@@ -22,22 +22,27 @@
 
                 <div class="form-group">
                     <label for="inputPatientPhoneNumber">Telefon</label>
-                    <input type="text" class="form-control" id="inputPatientPhoneNumber" ng-model="inputPatientPhoneNumber" placeholder="phone" required />
+                    <input type="number" class="form-control" id="inputPatientPhoneNumber" ng-model="inputPatientPhoneNumber" placeholder="phone" required />
                 </div>
 
                 <div class="form-group">
                     <label for="inputPatientAge">Varsta</label>
-                    <input type="text" class="form-control" id="inputPatientAge" ng-model="inputPatientAge" placeholder="varsta" required />
+                    <input type="number" class="form-control" id="inputPatientAge" ng-model="inputPatientAge" placeholder="varsta" required />
                 </div>
 
                 <div class="form-group">
                     <label for="inputPatientCnp">Cnp</label>
-                    <input type="text" class="form-control" id="inputPatientCnp" ng-model="inputPatientCnp" placeholder="cnp" required />
+                    <input type="number" class="form-control" id="inputPatientCnp" ng-model="inputPatientCnp" placeholder="cnp" required />
                 </div>
 
                 <div class="form-group">
                     <label for="inputPatientGender">Gen</label>
-                    <input type="text" class="form-control" id="inputPatientGender" ng-model="inputPatientGender" placeholder="gen" required />
+                    <select class="selectpicker my-dropdown" id="inputPatientGender" ng-model="inputPatientGender" style="padding:10px 10px;">
+                        <option value="" selected disabled hidden>Gen</option>
+                        <option value="F">Feminin</option>
+                        <option value="M">Masculin</option>
+                    </select>
+                    <!--<input type="text" class="form-control" id="inputPatientGender" ng-model="inputPatientGender" placeholder="gen" required />-->
                 </div>
 
                 <button type="button" class="btn btn-primary" ng-click="addPatient()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Adauga pacient</button>
@@ -56,8 +61,8 @@
                 <td data-title="'Varsta'" sortable="'age'">{{p.age}}</td>
                 <td data-title="'Cnp'" sortable="'cnp'">{{p.cnp}}</td>
                 <td data-title="'Gen'" sortable="'gender'">{{p.gender}}</td>
-                <td data-title="'Actiuni'" ng-hide="hideAllActions()">
-                    <button type="button" class="btn-xs btn-danger" ng-click="deletePatient(p.id)">Delete</button>
+                <td data-title="'Actiuni'">
+                    <button type="button" class="btn-xs btn-danger" ng-click="deletePatient(p.id)" ng-hide="hideDelete()">Delete</button>
                 </td>
             </tr>
         </table>

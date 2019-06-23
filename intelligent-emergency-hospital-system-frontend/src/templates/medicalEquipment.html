@@ -150,8 +150,8 @@
                 <td data-title="'Status'" sortable="'status'">
                     <div ng-class="{'led-green': me.status == false, 'led-red': me.status == true}"></div>
                 </td>
-                <td data-title="'Actiuni'" ng-hide="hideAllActions()">
-                    <button type="button" class="btn-xs btn-danger" ng-click="deleteMedicalEquipment(me.id)">Delete</button>
+                <td data-title="'Actiuni'">
+                    <button type="button" class="btn-xs btn-danger" ng-click="deleteMedicalEquipment(me.id)" ng-hide="hideDelete()">Delete</button>
                 </td>
             </tr>
         </table>
