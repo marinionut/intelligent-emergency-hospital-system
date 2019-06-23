@@ -9,6 +9,7 @@ angular.module('RDash')
     "notAuthenticated" : "auth-not-authenticated",
     "authenticated" : "auth-authenticated"
 })
+.constant('hostnameAndPort', 'http://localhost:8081')
 
 .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -69,8 +70,8 @@ angular.module('RDash')
     }
 ])
 
-.run(['$rootScope', '$state', '$http', 'AuthService', 
-    function($rootScope, $state, $http, AuthService) {
+.run(['$rootScope', '$state', '$http', 'hostnameAndPort', 'AuthService',
+    function($rootScope, $state, $http, AuthService, hostnameAndPort) {
         $rootScope.$on('$stateChangeStart', function (event, next) {
             if (!AuthService.isAuthenticated()) {
               if (next.name !== 'login' && next.name !== 'register' && next.name !== 'medicalEquipmentConsole') {
@@ -79,7 +80,7 @@ angular.module('RDash')
               }
             } else {
             	if(!angular.isDefined($rootScope.memberinfo) && next.name !== 'register') {
-            		$http({method: 'GET', url: '/api/memberinfo'}).
+            		$http({method: 'GET', url: hostnameAndPort + '/api/memberinfo'}).
             		then(function(response) {
             			if(response.data.success)
             				$rootScope.memberinfo = response.data.msg;

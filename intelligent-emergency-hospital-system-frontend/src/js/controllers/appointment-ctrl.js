@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('AppointmentCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'NgTableParams', AppointmentCtrl]);
+    .controller('AppointmentCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'NgTableParams', 'hostnameAndPort', AppointmentCtrl]);
 
-function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, NgTableParams) {
+function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, NgTableParams, hostnameAndPort) {
     $scope.appointments = [];
     $scope.full = [];
     $scope.doctors = [];
@@ -12,13 +12,13 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
     $scope.getDoctor = function (id) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/doctor?id=' + id
+            url: hostnameAndPort + '/api/doctor?id=' + id
         }).then(function (response) {
             return response.data;
         });
     };
     $scope.getDoctors = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/doctor/all'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/api/doctor/all'}).then(function (response) {
             $scope.doctors = response.data;
         });
 
@@ -32,7 +32,7 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
         if (id !== undefined && id != null && id !== "")
             $http({
                 method: 'GET',
-                url: 'http://localhost:8081/api/room/bed/available?roomId=' + id
+                url: hostnameAndPort + '/api/room/bed/available?roomId=' + id
             }).then(function (response) {
                 $scope.freeBedsByRoomId = response.data;
             });
@@ -41,13 +41,13 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
     $scope.getPatient = function (id) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/patient?id=' + id
+            url: hostnameAndPort + '/api/patient?id=' + id
         }).then(function (response) {
             return response.data;
         });
     };
     $scope.getPatients = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/patient/all'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/api/patient/all'}).then(function (response) {
             $scope.patients = response.data;
         });
 
@@ -58,13 +58,13 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
     $scope.getRoom = function (id) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/room?id=' + id
+            url: hostnameAndPort + '/api/room?id=' + id
         }).then(function (response) {
             return response.data;
         });
     };
     $scope.getRooms = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/room/all'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/api/room/all'}).then(function (response) {
             $scope.rooms = response.data;
         });
 
@@ -72,7 +72,7 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
     $scope.getRooms();
 
     $scope.getAppointments = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/appointment/all'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/api/appointment/all'}).then(function (response) {
             $scope.appointments = response.data;
 
             $scope.appointmentTable = new NgTableParams({
@@ -116,7 +116,7 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
             return;
         }
 
-        $http({method: 'POST', data: newAppointment, url: 'http://localhost:8081/api/appointment/add'}).then(function (response) {
+        $http({method: 'POST', data: newAppointment, url: hostnameAndPort + '/api/appointment/add'}).then(function (response) {
             if (response.status == 200) {
                 $scope.getDoctors();
                 $scope.failMessage = "";
@@ -138,7 +138,7 @@ function AppointmentCtrl($scope, $rootScope, $window, $http, $q, $interval, $fil
     $scope.deleteAppointment = function (id) {
         $http({
             method: 'DELETE',
-            url: 'http://localhost:8081/api/appointment/delete?id=' + id
+            url: hostnameAndPort + '/api/appointment/delete?id=' + id
         }).then(function (response) {
             $scope.getAppointments();
         });

@@ -1,7 +1,7 @@
 angular.module('RDash')
-	.service('AuthService', ['$q', '$http', '$rootScope', 'AUTH', AuthService]);
+	.service('AuthService', ['$q', '$http', '$rootScope', 'AUTH', 'hostnameAndPort', AuthService]);
 
-function AuthService($q, $http, $rootScope, AUTH) {
+function AuthService($q, $http, $rootScope, AUTH, hostnameAndPort) {
 	var LOCAL_TOKEN_KEY = undefined;
 	var isAuthenticated = false;
 	var authToken;
@@ -35,7 +35,7 @@ function AuthService($q, $http, $rootScope, AUTH) {
 
 	function login(user) {
 		return $q(function(resolve, reject) {
-			$http.post('http://localhost:8081/api/authenticate', user)
+			$http.post(hostnameAndPort + '/api/authenticate', user)
 			.then(function(result) {
 				if(result.data.success) {
 					storeUserCredentials(result.data.token);

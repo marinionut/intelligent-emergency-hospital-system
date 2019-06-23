@@ -49,9 +49,9 @@
   <script type="text/javascript" src="js/dashboard.min.js"></script>
 </head>
 <body ng-controller="MasterCtrl" scroll="no" style="overflow: hidden">
-  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak ng-if="isDifferentThanMedicalEquipmentConsole()">
     <!-- Sidebar -->
-    <div id="sidebar-wrapper" ng-hide="hideForMedicalEquipmentConsole()">
+    <div id="sidebar-wrapper">
       <ul class="sidebar">
         <li class="sidebar-main">
           <a ng-click="toggleSidebar()">

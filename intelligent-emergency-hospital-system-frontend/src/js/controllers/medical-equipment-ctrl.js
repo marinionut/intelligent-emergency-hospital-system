@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('MedicalEquipmentCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$filter','NgTableParams', MedicalEquipmentCtrl]);
+    .controller('MedicalEquipmentCtrl', ['$scope', '$rootScope', '$cookies', '$window', '$http', '$q', '$filter', '$state', 'NgTableParams', 'hostnameAndPort', MedicalEquipmentCtrl]);
 
-function MedicalEquipmentCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTableParams) {
+function MedicalEquipmentCtrl($scope, $rootScope, $cookies, $window, $http, $q, $filter, $state, NgTableParams, hostnameAndPort) {
     $scope.medical_equipment = [];
     $scope.failMessage = "";
 
@@ -11,13 +11,17 @@ function MedicalEquipmentCtrl($scope, $rootScope, $window, $http, $q, $filter, N
         return false;
     };
 
+    $scope.hideSidebar = function() {
+        return ($state.current.name === 'medicalEquipmentConsole')
+    };
+
     $scope.getMedicalEquipment = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/medicalEquipment/all'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/api/medicalEquipment/all'}).then(function (response) {
             $scope.medical_equipment = response.data;
 
             $scope.medicalEquipmentTable = new NgTableParams({
                 page: 1,
-                count: 6
+                count: 8
             }, {
                 total: $scope.medical_equipment.length,
                 getData: function (params) {
@@ -47,7 +51,7 @@ function MedicalEquipmentCtrl($scope, $rootScope, $window, $http, $q, $filter, N
             return;
         }
 
-        $http({method: 'POST', data: newMedicalEquipment, url: 'http://localhost:8081/api/medicalEquipment/add'}).then(function (response) {
+        $http({method: 'POST', data: newMedicalEquipment, url: hostnameAndPort + '/api/medicalEquipment/add'}).then(function (response) {
             if (response.status == 200) {
                 $scope.getMedicalEquipment();
                 $scope.failMessage = "";
@@ -65,7 +69,7 @@ function MedicalEquipmentCtrl($scope, $rootScope, $window, $http, $q, $filter, N
     $scope.deleteMedicalEquipment = function (id) {
         $http({
             method: 'DELETE',
-            url: 'http://localhost:8081/api/medicalEquipment/delete?id=' + id
+            url: hostnameAndPort + '/api/medicalEquipment/delete?id=' + id
         }).then(function (response) {
             $scope.getMedicalEquipment();
         });
@@ -88,7 +92,7 @@ function MedicalEquipmentCtrl($scope, $rootScope, $window, $http, $q, $filter, N
 
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/medicalEquipment/update?id=' + id + "&status=" + status
+            url: hostnameAndPort + '/api/medicalEquipment/update?id=' + id + "&status=" + status
         })
             .then(function (response) {
                 if (response.status == 200) {

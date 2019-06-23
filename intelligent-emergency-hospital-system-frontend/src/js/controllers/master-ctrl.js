@@ -3,9 +3,9 @@
  */
 
 angular.module('RDash')
-    .controller('MasterCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$state', '$location', 'AuthService', 'AUTH', MasterCtrl]);
+    .controller('MasterCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$state', '$location', 'AuthService', 'AUTH', 'hostnameAndPort', MasterCtrl]);
 
-function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, AuthService, AUTH) {
+function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, AuthService, AUTH, hostnameAndPort) {
     /**
      * Sidebar Toggle & Cookie Control
      */
@@ -49,7 +49,7 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
     });
 
     $scope.$on(AUTH.authenticated, function(){
-        $http.get('http://localhost:8081/api/memberinfo').then(function(result){
+        $http.get(hostnameAndPort + '/api/memberinfo').then(function(result){
             if(result.data.success){
                 $rootScope.memberinfo = angular.fromJson(result.data.msg);
                 console.log("memberinfo  " + $rootScope.memberinfo);
@@ -59,7 +59,7 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
 
     $scope.isLogged = function(){
         if (AuthService.isAuthenticated()){
-            $http.get('http://localhost:8081/api/memberinfo').then(function(result){
+            $http.get(hostnameAndPort + '/api/memberinfo').then(function(result){
                 if(result.data.success){
                     $rootScope.memberinfo = angular.fromJson(result.data.msg);
                     console.log("memberinfo  " + $rootScope.memberinfo);
@@ -96,10 +96,12 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
         }
     });
 
-    $scope.hideForMedicalEquipmentConsole = function() {
+    $scope.isDifferentThanMedicalEquipmentConsole = function() {
         console.log($location.path());
-        if ($location.path() == '/medicalEquipmentConsole')
+        if ($location.path() == '/medicalEquipmentConsole') {
+            console.log("i am on medical medicalEquipmentConsole")
             return true;
+        }
         return false;
     }
 }

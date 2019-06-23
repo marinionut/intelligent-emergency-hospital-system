@@ -1,11 +1,11 @@
 angular.module('RDash')
-    .controller('ChartCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', ChartCtrl]);
+    .controller('ChartCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$interval', '$filter', 'hostnameAndPort', ChartCtrl]);
 
-function ChartCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter ) {
+function ChartCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, hostnameAndPort) {
     $scope.doctorBySpecialization = {};
 
     $scope.getDoctorBySpecialization = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/chart/doctorBySpecialization'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/chart/doctorBySpecialization'}).then(function (response) {
 
             $scope.doctorBySpecJson = {
                 globals: {
@@ -61,7 +61,7 @@ function ChartCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter ) 
 
     //CHART 2
     $scope.getAppointmentsCalendar = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/chart/appointmentCalendar'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/chart/appointmentCalendar'}).then(function (response) {
 
             console.log("test");
 
@@ -75,7 +75,7 @@ function ChartCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter ) 
 
     // //CHART 3
     // $scope.getAppointmentsCalendarZwing = function () {
-    //     $http({method: 'GET', url: 'http://localhost:8081/chart/appointmentCalendar2'}).then(function (response) {
+    //     $http({method: 'GET', url: hostnameAndPort + '/chart/appointmentCalendar2'}).then(function (response) {
     //         console.log("testtt2");
     //
     //         console.log(Object.entries(response.data));
@@ -120,7 +120,7 @@ function ChartCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter ) 
 
     //CHART 4
     $scope.getAlertByRoom = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/chart/alertsByRoom'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/chart/alertsByRoom'}).then(function (response) {
             console.log("testtt2");
             console.log(Object.entries(response.data));
 
@@ -140,7 +140,7 @@ function ChartCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter ) 
 
 
     $scope.getAlertCalendar = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/chart/alertsCalendar'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/chart/alertsCalendar'}).then(function (response) {
             console.log("getting alers calendar");
             console.log(Object.entries(response.data));
 

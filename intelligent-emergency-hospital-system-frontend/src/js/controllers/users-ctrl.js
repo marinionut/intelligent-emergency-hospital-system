@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('UsersCtrl', ['$q', '$scope', '$rootScope', '$http', '$window', '$filter', 'NgTableParams', UsersCtrl]);
+    .controller('UsersCtrl', ['$q', '$scope', '$rootScope', '$http', '$window', '$filter', 'NgTableParams', 'hostnameAndPort', UsersCtrl]);
 
-function UsersCtrl($q, $scope, $rootScope, $http, $window, $filter, NgTableParams) {
+function UsersCtrl($q, $scope, $rootScope, $http, $window, $filter, NgTableParams, hostnameAndPort) {
 
     console.log($rootScope.memberinfo);
 
@@ -11,7 +11,7 @@ function UsersCtrl($q, $scope, $rootScope, $http, $window, $filter, NgTableParam
     $scope.role = $scope.roles[0];
 
     $scope.getUsers = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/user/all'}).then(function (response) {
+        $http({method: 'GET', url: hostnameAndPort + '/api/user/all'}).then(function (response) {
             $scope.users = response.data;
 
             $scope.usersTable = new NgTableParams({
@@ -46,7 +46,7 @@ function UsersCtrl($q, $scope, $rootScope, $http, $window, $filter, NgTableParam
             return;
         }
 
-        $http({method: 'POST', data: newUser, url: 'http://localhost:8081/api/user/add'}).then(function (response) {
+        $http({method: 'POST', data: newUser, url: hostnameAndPort + '/api/user/add'}).then(function (response) {
             if (response.status == 200) {
                 $scope.failMessage = "";
                 $scope.getUsers();
@@ -62,7 +62,7 @@ function UsersCtrl($q, $scope, $rootScope, $http, $window, $filter, NgTableParam
     }
 
     $scope.deleteUser = function (id) {
-        $http({method: 'DELETE', url: 'http://localhost:8081/api/user/delete?id=' + id}).then(function (response) {
+        $http({method: 'DELETE', url: hostnameAndPort + '/api/user/delete?id=' + id}).then(function (response) {
             $scope.getUsers();
         });
     }
