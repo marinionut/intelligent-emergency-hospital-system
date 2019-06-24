@@ -51,7 +51,7 @@
 <body ng-controller="MasterCtrl" scroll="no" style="overflow: hidden">
   <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
     <!-- Sidebar -->
-    <div id="sidebar-wrapper" ng-hide="hideForMedicalEquipmentConsole()">
+    <div id="sidebar-wrapper">
       <ul class="sidebar">
         <li class="sidebar-main">
           <a ng-click="toggleSidebar()">
@@ -60,45 +60,45 @@
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
-        <li class="sidebar-list" ng-hide="memberinfo == null">
+        <li class="sidebar-list" ng-hide="memberinfo == null || isMedicalEquipmentConsole()">
           <a href="#!/doctor">Doctori <span class="menu-icon fa fa-user-md"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null">
+        <li class="sidebar-list" ng-hide="memberinfo == null || isMedicalEquipmentConsole()">
           <a href="#!/patient">Pacienti <span class="menu-icon fa fa-users"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null">
+        <li class="sidebar-list" ng-hide="memberinfo == null || isMedicalEquipmentConsole()">
           <a href="#!/room">Camere <span class="menu-icon fa fa-hospital-o"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null">
+        <li class="sidebar-list" ng-hide="memberinfo == null || isMedicalEquipmentConsole()">
           <a href="#!/appointment">Internari <span class="menu-icon fa fa-stethoscope"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null">
+        <li class="sidebar-list" ng-hide="memberinfo == null || isMedicalEquipmentConsole()">
           <a href="#!/medicalEquipment">Echipamente<span class="menu-icon fa fa-medkit"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null">
+        <li class="sidebar-list" ng-hide="memberinfo == null || isMedicalEquipmentConsole()">
           <a href="#!/alerts">Alerte <span class="menu-icon fa fa-bell" ng-hide="memberinfo == null"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'">
+        <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'  || isMedicalEquipmentConsole()">
           <a href="#!/charts">Rapoarte <span class="menu-icon fa fa-bar-chart-o" ng-hide="memberinfo == null"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null">
+        <li class="sidebar-list" ng-hide="memberinfo == null" || isMedicalEquipmentConsole()>
           <a href="#!/emergencyMap">Harta urgente<span class="menu-icon fa fa-map-marker" ng-hide="memberinfo == null"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'">
+        <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'" || isMedicalEquipmentConsole()>
           <a href="#!/users">Utilizatori <span class="menu-icon fa fa-users"></span></a>
         </li>
       </ul>
       <div class="sidebar-footer">
         <span style="display: inline-block;">
-          <label type="button" class="btn btn-danger" ng-click="logout()" ng-hide="memberinfo == null" style="margin-top: 3px;">Logout<span class="fa fa-sign-out" style="padding-left: 5px;"></span></label>
+          <label type="button" class="btn btn-danger" ng-click="logout()" ng-hide="memberinfo == null || isMedicalEquipmentConsole()" style="margin-top: 3px;">Logout<span class="fa fa-sign-out" style="padding-left: 5px;"></span></label>
         </span>
       </div>
     </div>

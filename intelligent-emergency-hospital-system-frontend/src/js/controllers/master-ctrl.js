@@ -96,7 +96,7 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
         }
     });
 
-    $scope.hideForMedicalEquipmentConsole = function() {
+    $scope.isMedicalEquipmentConsole = function() {
         console.log($location.path());
         if ($location.path() == '/medicalEquipmentConsole')
             return true;
