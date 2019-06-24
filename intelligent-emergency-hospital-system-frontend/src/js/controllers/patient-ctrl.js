@@ -1,7 +1,7 @@
 angular.module('RDash')
-    .controller('PatientCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$filter','NgTableParams', 'hostnameAndPort', PatientCtrl]);
+    .controller('PatientCtrl', ['$scope', '$rootScope', '$window', '$http', '$q', '$filter','NgTableParams', PatientCtrl]);
 
-function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTableParams, hostnameAndPort) {
+function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTableParams) {
     $scope.patients = [];
     $scope.failMessage = "";
 
@@ -12,7 +12,7 @@ function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTablePar
     };
 
     $scope.getPatients = function () {
-        $http({method: 'GET', url: hostnameAndPort + '/api/patient/all'}).then(function (response) {
+        $http({method: 'GET', url: 'http://localhost:8081/api/patient/all'}).then(function (response) {
             $scope.patients = response.data;
 
             $scope.patientsTable = new NgTableParams({
@@ -55,7 +55,7 @@ function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTablePar
             return;
         }
 
-        $http({method: 'POST', data: newPatient, url: hostnameAndPort + '/api/patient/add'}).then(function (response) {
+        $http({method: 'POST', data: newPatient, url: 'http://localhost:8081/api/patient/add'}).then(function (response) {
             if (response.status == 200) {
                 $scope.getPatients();
                 $scope.failMessage = "";
@@ -77,7 +77,7 @@ function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTablePar
     $scope.deletePatient = function (id) {
         $http({
             method: 'DELETE',
-            url: hostnameAndPort + '/api/patient/delete?id=' + id
+            url: 'http://localhost:8081/api/patient/delete?id=' + id
         }).then(function (response) {
             $scope.getPatients();
         });

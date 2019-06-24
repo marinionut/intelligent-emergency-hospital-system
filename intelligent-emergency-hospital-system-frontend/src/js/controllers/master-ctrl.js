@@ -3,9 +3,9 @@
  */
 
 angular.module('RDash')
-    .controller('MasterCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$state', '$location', 'AuthService', 'AUTH', 'hostnameAndPort', MasterCtrl]);
+    .controller('MasterCtrl', ['$scope', '$cookies', '$rootScope', '$http', '$state', '$location', 'AuthService', 'AUTH', MasterCtrl]);
 
-function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, AuthService, AUTH, hostnameAndPort) {
+function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, AuthService, AUTH) {
     /**
      * Sidebar Toggle & Cookie Control
      */
@@ -49,7 +49,7 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
     });
 
     $scope.$on(AUTH.authenticated, function(){
-        $http.get(hostnameAndPort + '/api/memberinfo').then(function(result){
+        $http.get('http://localhost:8081/api/memberinfo').then(function(result){
             if(result.data.success){
                 $rootScope.memberinfo = angular.fromJson(result.data.msg);
                 console.log("memberinfo  " + $rootScope.memberinfo);
@@ -59,7 +59,7 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
 
     $scope.isLogged = function(){
         if (AuthService.isAuthenticated()){
-            $http.get(hostnameAndPort + '/api/memberinfo').then(function(result){
+            $http.get('http://localhost:8081/api/memberinfo').then(function(result){
                 if(result.data.success){
                     $rootScope.memberinfo = angular.fromJson(result.data.msg);
                     console.log("memberinfo  " + $rootScope.memberinfo);
@@ -96,12 +96,10 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
         }
     });
 
-    $scope.isDifferentThanMedicalEquipmentConsole = function() {
+    $scope.hideForMedicalEquipmentConsole = function() {
         console.log($location.path());
-        if ($location.path() == '/medicalEquipmentConsole') {
-            console.log("i am on medical medicalEquipmentConsole")
+        if ($location.path() == '/medicalEquipmentConsole')
             return true;
-        }
         return false;
     }
 }

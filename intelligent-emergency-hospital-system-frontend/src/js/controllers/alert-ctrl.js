@@ -1,14 +1,14 @@
 angular.module('RDash')
-    .controller('AlertsCtrl', ['$scope', '$rootScope', '$http', '$filter', 'NgTableParams', 'hostnameAndPort', AlertsCtrl]);
+    .controller('AlertsCtrl', ['$scope', '$rootScope', '$http', '$filter', 'NgTableParams', AlertsCtrl]);
 
-function AlertsCtrl($scope, $rootScope, $http, $filter, NgTableParams, hostnameAndPort) {
+function AlertsCtrl($scope, $rootScope, $http, $filter, NgTableParams) {
 
     console.log($rootScope.memberinfo);
 
     $scope.alerts = [];
 
     $scope.getAllAlerts = function () {
-        $http({method: 'GET', url: hostnameAndPort + '/api/alert/all'})
+        $http({method: 'GET', url: 'http://localhost:8081/api/alert/all'})
             .then(function (response) {
                 $scope.alerts = response.data;
 
@@ -47,7 +47,7 @@ function AlertsCtrl($scope, $rootScope, $http, $filter, NgTableParams, hostnameA
 
     $rootScope.connectSocket = function connect() {
         console.log("trying to coonect to socket");
-        var socket = new SockJS(hostnameAndPort + '/gs-guide-websocket');
+        var socket = new SockJS('http://localhost:8081/gs-guide-websocket');
         $rootScope.stompClient = Stomp.over(socket);
 
         $rootScope.stompClient.connect({}, function (frame) {
