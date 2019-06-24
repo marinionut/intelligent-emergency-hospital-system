@@ -43,7 +43,7 @@
             <tbody id="tbl_posts_body" style="overflow-y:scroll;">
                 <tr ng-repeat="app in $data">
                     <td data-title="'#'"><span class="sn">{{(appointmentTable.page() - 1) * appointmentTable.count() + $index + 1}}</span>.</td>
-                    <td data-title="'Doctor'" sortable="'firstName'">{{app.doctor.firstName}} {{app.doctor.lastName}} - {{app.doctor.specialization}}</td>
+                    <td data-title="'Doctor'" sortable="'firstName'">{{app.doctor.firstName}} {{app.doctor.lastName}}</td>
                     <td data-title="'Pacient'">{{app.patient.firstName}} {{app.patient.lastName}}</td>
                     <td data-title="'Camera'">{{app.room.number}} - {{app.room.description}}</td>
                     <td data-title="'Pat'">{{app.bedNumber}}</td>

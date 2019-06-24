@@ -34,7 +34,7 @@ public class Receiver {
         logger.info("$$ Business consumer -> received data='{}'", data);
         try {
             logger.info("$$ Business consumer -> prepare to send sms alert");
-            //smsService.sendSms(data.getToPhoneNumber(), data.getMessage());
+            smsService.sendSms(data.getToPhoneNumber(), data.getMessage());
         } catch (Exception e) {
             logger.error("----------EEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!", e);
             System.out.println("----------EEEEEERRRRROOOORRRRRR!!!!!!!!!!!!!!!!");
