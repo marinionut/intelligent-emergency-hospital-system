@@ -116,7 +116,7 @@
         <fieldset class="scheduler-border">
             <legend class="scheduler-border"></legend>
 
-            <form class="form-inline" ng-hide="hideAdd()">
+            <form class="form-inline">
                 <div class="form-group">
                     <label for="inputMedicalEquipmentName">Denumire</label>
                     <input type="text" class="form-control" id="inputMedicalEquipmentName" ng-model="inputMedicalEquipmentName" placeholder="denumire" required />
@@ -151,7 +151,7 @@
                     <div ng-class="{'led-green': me.status == false, 'led-red': me.status == true}"></div>
                 </td>
                 <td data-title="'Actiuni'">
-                    <button type="button" class="btn-xs btn-danger" ng-click="deleteMedicalEquipment(me.id)" ng-hide="hideDelete()">Delete</button>
+                    <button type="button" class="btn-xs btn-danger" ng-click="deleteMedicalEquipment(me.id)">Delete</button>
                 </td>
             </tr>
         </table>

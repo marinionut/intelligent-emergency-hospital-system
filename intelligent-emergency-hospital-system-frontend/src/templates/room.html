@@ -3,7 +3,7 @@
     <div class="container" style="padding:10px 10px;">
         <fieldset class="scheduler-border">
             <legend class="scheduler-border"></legend>
-            <form class="form-inline" ng-hide="hideAllActions()">
+            <form class="form-inline">
                 <div class="form-group">
                     <label for="inputRoomNumber">Numar</label>
                     <input type="number" class="form-control" id="inputRoomNumber" ng-model="inputRoomNumber" placeholder="numar" required />
@@ -32,7 +32,7 @@
                 <td data-title="'Descriere'" sortable="'description'">{{r.description}}</td>
                 <td data-title="'Numar paturi'" sortable="'bedNumber'">{{r.bedNumber}}</td>
                 <td data-title="'Actiuni'">
-                    <button type="button" class="btn-xs btn-danger" ng-click="deleteRoom(r.id)" ng-hide="hideDelete()">Delete</button>
+                    <button type="button" class="btn-xs btn-danger" ng-click="deleteRoom(r.id)">Delete</button>
                 </td>
             </tr>
         </table>

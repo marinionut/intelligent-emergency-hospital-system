@@ -4,7 +4,7 @@
         <fieldset class="scheduler-border">
             <legend class="scheduler-border"></legend>
 
-            <form class="form-inline" ng-hide="hideAdd()">
+            <form class="form-inline">
                 <div class="form-group">
                     <label for="inputPatientFirstName">Nume</label>
                     <input type="text" class="form-control" id="inputPatientFirstName" ng-model="inputPatientFirstName" placeholder="first name" required />
@@ -62,7 +62,7 @@
                 <td data-title="'Cnp'" sortable="'cnp'">{{p.cnp}}</td>
                 <td data-title="'Gen'" sortable="'gender'">{{p.gender}}</td>
                 <td data-title="'Actiuni'">
-                    <button type="button" class="btn-xs btn-danger" ng-click="deletePatient(p.id)" ng-hide="hideDelete()">Delete</button>
+                    <button type="button" class="btn-xs btn-danger" ng-click="deletePatient(p.id)">Delete</button>
                 </td>
             </tr>
         </table>

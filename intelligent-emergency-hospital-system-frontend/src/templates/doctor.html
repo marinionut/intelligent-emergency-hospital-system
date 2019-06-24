@@ -3,7 +3,7 @@
     <div class="container" style="padding:10px 10px;">
         <fieldset class="scheduler-border">
             <legend class="scheduler-border"></legend>
-            <form class="form-inline" ng-hide="hideAllActions()">
+            <form class="form-inline">
                 <div class="form-group">
                     <label for="inputDoctorFirstName">Nume</label>
                     <input type="text" class="form-control" id="inputDoctorFirstName" ng-model="inputDoctorFirstName" placeholder="first name" required />
@@ -58,7 +58,7 @@
                 <td data-title="'Specializare'"sortable="'specialization'">{{doc.specialization}}</td>
                 <td data-title="'Utilizator'"sortable="'username'">{{doc.userEntity !== null ? doc.userEntity.username : '=nedefinit='}}</td>
                 <td data-title="'Actiuni'">
-                    <button type="button" class="btn-xs btn-danger" ng-click="deleteDoctor(doc.id)" ng-hide="hideDelete()">Delete</button>
+                    <button type="button" class="btn-xs btn-danger" ng-click="deleteDoctor(doc.id)">Delete</button>
                 </td>
             </tr>
             </tbody>

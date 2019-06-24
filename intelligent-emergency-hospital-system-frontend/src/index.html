@@ -84,7 +84,7 @@
           <a href="#!/alerts">Alerte <span class="menu-icon fa fa-bell" ng-hide="memberinfo == null"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'  || isMedicalEquipmentConsole()">
+        <li class="sidebar-list" ng-hide="memberinfo == null  || isMedicalEquipmentConsole()">
           <a href="#!/charts">Rapoarte <span class="menu-icon fa fa-bar-chart-o" ng-hide="memberinfo == null"></span></a>
         </li>
 
@@ -92,7 +92,7 @@
           <a href="#!/emergencyMap">Harta urgente<span class="menu-icon fa fa-map-marker" ng-hide="memberinfo == null"></span></a>
         </li>
 
-        <li class="sidebar-list" ng-hide="memberinfo == null || memberinfo.role != 'admin'  || isMedicalEquipmentConsole()">
+        <li class="sidebar-list" ng-hide="memberinfo == null || isMedicalEquipmentConsole()">
           <a href="#!/users">Utilizatori <span class="menu-icon fa fa-users"></span></a>
         </li>
       </ul>

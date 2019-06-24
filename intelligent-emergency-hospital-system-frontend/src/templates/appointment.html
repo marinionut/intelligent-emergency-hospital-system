@@ -3,7 +3,7 @@
     <div class="container" style="padding:10px 10px;">
         <fieldset class="scheduler-border">
             <legend class="scheduler-border"></legend>
-            <form class="form-inline" ng-hide="hideAdd()">
+            <form class="form-inline">
 
                 <div class="form-group">
                     <label for="inputDoctorId">Doctor</label>
@@ -48,7 +48,7 @@
                     <td data-title="'Camera'">{{app.room.number}} - {{app.room.description}}</td>
                     <td data-title="'Pat'">{{app.bedNumber}}</td>
                     <td data-title="'Actiuni'">
-                        <button type="button" class="btn-xs btn-danger" ng-click="deleteAppointment(app.id)" ng-hide="hideDelete()">Delete</button>
+                        <button type="button" class="btn-xs btn-danger" ng-click="deleteAppointment(app.id)">Delete</button>
                     </td>
                 </tr>
             </tbody>
