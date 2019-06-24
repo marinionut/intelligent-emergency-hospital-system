@@ -35,7 +35,7 @@ function AuthService($q, $http, $rootScope, AUTH) {
 
 	function login(user) {
 		return $q(function(resolve, reject) {
-			$http.post('http://localhost:8081/api/authenticate', user)
+			$http.post('http://35.234.123.144:8081/api/authenticate', user)
 			.then(function(result) {
 				if(result.data.success) {
 					storeUserCredentials(result.data.token);

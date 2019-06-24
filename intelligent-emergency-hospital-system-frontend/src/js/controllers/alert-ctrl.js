@@ -8,7 +8,7 @@ function AlertsCtrl($scope, $rootScope, $http, $filter, NgTableParams) {
     $scope.alerts = [];
 
     $scope.getAllAlerts = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/alert/all'})
+        $http({method: 'GET', url: 'http://35.234.123.144:8081/api/alert/all'})
             .then(function (response) {
                 $scope.alerts = response.data;
 
@@ -47,7 +47,7 @@ function AlertsCtrl($scope, $rootScope, $http, $filter, NgTableParams) {
 
     $rootScope.connectSocket = function connect() {
         console.log("trying to coonect to socket");
-        var socket = new SockJS('http://localhost:8081/gs-guide-websocket');
+        var socket = new SockJS('http://35.234.123.144:8081/gs-guide-websocket');
         $rootScope.stompClient = Stomp.over(socket);
 
         $rootScope.stompClient.connect({}, function (frame) {

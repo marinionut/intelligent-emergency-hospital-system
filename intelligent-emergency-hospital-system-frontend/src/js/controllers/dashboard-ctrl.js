@@ -82,7 +82,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval) {
     $scope.inputZone = $scope.zones[0];
 
     $scope.getVMs = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/vm/all'}).then(function (response) {
+        $http({method: 'GET', url: 'http://35.234.123.144:8081/api/vm/all'}).then(function (response) {
             $scope.virtualMachines = response.data;
         });
 
@@ -106,7 +106,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval) {
             return;
         }
 
-        $http({method: 'POST', data: newVM, url: 'http://localhost:8081/api/vm/add'}).then(function (response) {
+        $http({method: 'POST', data: newVM, url: 'http://35.234.123.144:8081/api/vm/add'}).then(function (response) {
             if (response.status == 200) {
                 $scope.getVMs();
                 $scope.failMessage = "";
@@ -127,7 +127,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval) {
     $scope.deleteVM = function (vmName, zone, status) {
         $http({
             method: 'DELETE',
-            url: 'http://localhost:8081/api/vm/delete?vmName=' + vmName + '&zone=' + zone
+            url: 'http://35.234.123.144:8081/api/vm/delete?vmName=' + vmName + '&zone=' + zone
         }).then(function (response) {
             $scope.getVMs();
         });
@@ -137,7 +137,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval) {
     $scope.stopVM = function (vmName, zone, status) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/vm/stop?vmName=' + vmName + '&zone=' + zone
+            url: 'http://35.234.123.144:8081/api/vm/stop?vmName=' + vmName + '&zone=' + zone
         }).then(function (response) {
             $scope.getVMs();
         });
@@ -146,7 +146,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval) {
     $scope.resetVM = function (vmName, zone, status) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/vm/reset?vmName=' + vmName + '&zone=' + zone
+            url: 'http://35.234.123.144:8081/api/vm/reset?vmName=' + vmName + '&zone=' + zone
         }).then(function (response) {
             $scope.getVMs();
         });
@@ -155,7 +155,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval) {
     $scope.startVM = function (vmName, zone, status) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/vm/start?vmName=' + vmName + '&zone=' + zone
+            url: 'http://35.234.123.144:8081/api/vm/start?vmName=' + vmName + '&zone=' + zone
         }).then(function (response) {
             $scope.getVMs();
         });
@@ -164,7 +164,7 @@ function DashboardCtrl($scope, $rootScope, $window, $http, $q, $interval) {
     $scope.getVM = function (vmName, zone) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/vm/get?vmName=' + vmName + '&zone=' + zone
+            url: 'http://35.234.123.144:8081/api/vm/get?vmName=' + vmName + '&zone=' + zone
         }).then(function (response) {
             return response.data
         });

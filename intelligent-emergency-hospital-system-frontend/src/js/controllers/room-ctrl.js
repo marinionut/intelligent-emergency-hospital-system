@@ -12,7 +12,7 @@ function RoomCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, Ng
     };
 
     $scope.getRooms = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/room/all'}).then(function (response) {
+        $http({method: 'GET', url: 'http://35.234.123.144:8081/api/room/all'}).then(function (response) {
             $scope.rooms = response.data;
 
             $scope.roomsTable = new NgTableParams({
@@ -47,7 +47,7 @@ function RoomCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, Ng
             return;
         }
 
-        $http({method: 'POST', data: newRoom, url: 'http://localhost:8081/api/room/add'}).then(function (response) {
+        $http({method: 'POST', data: newRoom, url: 'http://35.234.123.144:8081/api/room/add'}).then(function (response) {
             if (response.status == 200) {
                 $scope.getRooms();
                 $scope.failMessage = "";
@@ -67,7 +67,7 @@ function RoomCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, Ng
     $scope.deleteRoom = function (id) {
         $http({
             method: 'DELETE',
-            url: 'http://localhost:8081/api/room/delete?id=' + id
+            url: 'http://35.234.123.144:8081/api/room/delete?id=' + id
         }).then(function (response) {
             $scope.getRooms();
         });

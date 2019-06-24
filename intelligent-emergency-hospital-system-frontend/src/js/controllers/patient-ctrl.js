@@ -12,7 +12,7 @@ function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTablePar
     };
 
     $scope.getPatients = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/patient/all'}).then(function (response) {
+        $http({method: 'GET', url: 'http://35.234.123.144:8081/api/patient/all'}).then(function (response) {
             $scope.patients = response.data;
 
             $scope.patientsTable = new NgTableParams({
@@ -55,7 +55,7 @@ function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTablePar
             return;
         }
 
-        $http({method: 'POST', data: newPatient, url: 'http://localhost:8081/api/patient/add'}).then(function (response) {
+        $http({method: 'POST', data: newPatient, url: 'http://35.234.123.144:8081/api/patient/add'}).then(function (response) {
             if (response.status == 200) {
                 $scope.getPatients();
                 $scope.failMessage = "";
@@ -77,7 +77,7 @@ function PatientCtrl($scope, $rootScope, $window, $http, $q, $filter, NgTablePar
     $scope.deletePatient = function (id) {
         $http({
             method: 'DELETE',
-            url: 'http://localhost:8081/api/patient/delete?id=' + id
+            url: 'http://35.234.123.144:8081/api/patient/delete?id=' + id
         }).then(function (response) {
             $scope.getPatients();
         });

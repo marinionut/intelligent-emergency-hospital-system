@@ -30,7 +30,7 @@
 //         var getLocationTwitter = function (lat, lon, radius, since_date, until_date, searchTags) {
 //             param_check(lat, lon, radius, since_date, until_date);
 //
-//             var url = "http://localhost:8081/tweets/locationAndDate?" +
+//             var url = "http://35.234.123.144:8081/tweets/locationAndDate?" +
 //                 "lat=" + lat + "&" + "lon=" + lon  + "&res=" + radius +
 //                 "&since=" + since_date + "&until=" + until_date + "&searchTags=" + searchTags;
 //
@@ -44,7 +44,7 @@
 //
 //         var submitFormService = function (nume, prenume, initialaTata, cnp, adresa, judet, localitate, telefon,
 //         email, tipVenit, beneficiar, codIdentificare, cont, salariuBrut, sumaTotala) {
-//             var url = "http://localhost:8081/formular?nume=" + nume + "&" +
+//             var url = "http://35.234.123.144:8081/formular?nume=" + nume + "&" +
 //                     "prenume=" + prenume + "&" +
 //                     "initialaTata=" + initialaTata + "&" +
 //                     "cnp=" + cnp + "&" +
@@ -68,7 +68,7 @@
 //         };
 //
 //         var getPdf = function (pdfName) {
-//             var url = "http://localhost:8081/formular/pdfOrder?pdfName=" + pdfName;
+//             var url = "http://35.234.123.144:8081/formular/pdfOrder?pdfName=" + pdfName;
 //
 //             return $http({
 //                 url: url,
@@ -80,7 +80,7 @@
 //
 //         var getReportPdf = function () {
 //
-//             var url = "http://localhost:8081/report/pdf";
+//             var url = "http://35.234.123.144:8081/report/pdf";
 //
 //             return $http({
 //                 url: url,

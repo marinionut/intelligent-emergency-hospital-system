@@ -49,7 +49,7 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
     });
 
     $scope.$on(AUTH.authenticated, function(){
-        $http.get('http://localhost:8081/api/memberinfo').then(function(result){
+        $http.get('http://35.234.123.144:8081/api/memberinfo').then(function(result){
             if(result.data.success){
                 $rootScope.memberinfo = angular.fromJson(result.data.msg);
                 console.log("memberinfo  " + $rootScope.memberinfo);
@@ -59,7 +59,7 @@ function MasterCtrl($scope, $cookies, $rootScope, $http, $state, $location, Auth
 
     $scope.isLogged = function(){
         if (AuthService.isAuthenticated()){
-            $http.get('http://localhost:8081/api/memberinfo').then(function(result){
+            $http.get('http://35.234.123.144:8081/api/memberinfo').then(function(result){
                 if(result.data.success){
                     $rootScope.memberinfo = angular.fromJson(result.data.msg);
                     console.log("memberinfo  " + $rootScope.memberinfo);

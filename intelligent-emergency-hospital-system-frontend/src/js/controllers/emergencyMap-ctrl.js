@@ -9,7 +9,7 @@ function EmergencyMapCtrl($scope, $rootScope, $window, $http, $q, $interval, $fi
     $scope.getEmergencies = function (startDate) {
         var millis = new Date(startDate).getTime();
         console.log("get emergencies by start dates: " + startDate);
-        $http({method: 'GET', url: 'http://localhost:8081/api/emergency?startDate=' + millis}).then(function (response) {
+        $http({method: 'GET', url: 'http://35.234.123.144:8081/api/emergency?startDate=' + millis}).then(function (response) {
             $scope.emergencies = response.data;
             console.log($scope.emergencies);
             console.log(response.data.alertEntityList)
@@ -43,7 +43,7 @@ function EmergencyMapCtrl($scope, $rootScope, $window, $http, $q, $interval, $fi
     };
 
     if (typeof(EventSource) !== "undefined") {
-        var source = new EventSource('http://localhost:8081/emergency/stream');
+        var source = new EventSource('http://35.234.123.144:8081/emergency/stream');
         // var div = document.getElementById('demo');
 
         source.onopen = function (event) {

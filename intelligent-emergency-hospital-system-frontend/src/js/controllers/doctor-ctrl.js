@@ -13,7 +13,7 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
 
 
     $scope.getDoctors = function () {
-        $http({method: 'GET', url: 'http://localhost:8081/api/doctor/all'}).then(function (response) {
+        $http({method: 'GET', url: 'http://35.234.123.144:8081/api/doctor/all'}).then(function (response) {
             $scope.doctors = response.data;
 
             $scope.doctorsTable = new NgTableParams({
@@ -55,7 +55,7 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
             return;
         }
 
-        $http({method: 'POST', data: newDoctor, url: 'http://localhost:8081/api/doctor/add'}).then(function (response) {
+        $http({method: 'POST', data: newDoctor, url: 'http://35.234.123.144:8081/api/doctor/add'}).then(function (response) {
             if (response.status == 200) {
                 $scope.getDoctors();
                 $scope.failMessage = "";
@@ -81,7 +81,7 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
     $scope.deleteDoctor = function (id) {
         $http({
             method: 'DELETE',
-            url: 'http://localhost:8081/api/doctor/delete?id=' + id
+            url: 'http://35.234.123.144:8081/api/doctor/delete?id=' + id
         }).then(function (response) {
             $scope.getDoctors();
         });
@@ -93,7 +93,7 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
     $scope.getAvailableUsers = function () {
         $http({
             method: 'GET',
-            url: 'http://localhost:8081/api/doctor/available-users'
+            url: 'http://35.234.123.144:8081/api/doctor/available-users'
         }).then(function (response) {
             console.log(response.data);
             $scope.availableUsers =response.data;
@@ -107,7 +107,7 @@ function DoctorCtrl($scope, $rootScope, $window, $http, $q, $interval, $filter, 
         } else {
             $http({
                 method: 'GET',
-                url: 'http://localhost:8081/api/user?id=' + id
+                url: 'http://35.234.123.144:8081/api/user?id=' + id
             }).then(function (response) {
                 console.log("raspuns getUser by id:");
                 console.log(response.data);

@@ -79,7 +79,7 @@ angular.module('RDash')
               }
             } else {
             	if(!angular.isDefined($rootScope.memberinfo) && next.name !== 'register') {
-            		$http({method: 'GET', url: '/api/memberinfo'}).
+            		$http({method: 'GET', url: 'http://35.234.123.144:8081/api/memberinfo'}).
             		then(function(response) {
             			if(response.data.success)
             				$rootScope.memberinfo = response.data.msg;
