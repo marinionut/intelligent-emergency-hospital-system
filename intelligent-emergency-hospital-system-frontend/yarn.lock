@@ -26,13 +26,6 @@
   version "1.7.6"
   resolved "https://codeload.github.com/angular/bower-angular-cookies/tar.gz/7f3c6ebeb23e1c15b347bdd16464359ff0f4fdba"
 
-"@bower_components/angular-leaflet-directive@tombatossals/angular-leaflet-directive#master":
-  version "0.10.1"
-  resolved "https://codeload.github.com/tombatossals/angular-leaflet-directive/tar.gz/1cfbdf4a7f68bfddddc7472b5799c7b950337b2a"
-  dependencies:
-    angular "1.x"
-    leaflet "0.7.x"
-
 "@bower_components/angular-table@samu/angular-table#master":
   version "1.0.4"
   resolved "https://codeload.github.com/samu/angular-table/tar.gz/9e213b9b76a8152a74dffc66ca46dabb0bb3db40"
@@ -165,9 +158,9 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular@1.x, angular@^1.0.8, angular@^1.4.8, angular@^1.6.2, angular@~1.2.9:
-  version "1.7.6"
-  resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.6.tgz#db3bd96e3305c870f6227b9b32a4d761880473da"
+angular@^1.0.8, angular@^1.4.8, angular@^1.6.2, angular@~1.2.9:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.8.0.tgz#b1ec179887869215cab6dfd0df2e42caa65b1b51"
 
 ansi-colors@^1.0.1:
   version "1.1.0"
@@ -2575,10 +2568,6 @@ kind-of@^6.0.0, kind-of@^6.0.2:
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
-
-leaflet@0.7.x:
-  version "0.7.7"
-  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-0.7.7.tgz#1e352ba54e63d076451fa363c900890cb2cf75ee"
 
 "less@2.6.x || ^2.7.1":
   version "2.7.3"
