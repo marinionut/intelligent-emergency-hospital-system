@@ -26,13 +26,6 @@
   version "1.7.6"
   resolved "https://codeload.github.com/angular/bower-angular-cookies/tar.gz/7f3c6ebeb23e1c15b347bdd16464359ff0f4fdba"
 
-"@bower_components/angular-leaflet-directive@tombatossals/angular-leaflet-directive#master":
-  version "0.10.1"
-  resolved "https://codeload.github.com/tombatossals/angular-leaflet-directive/tar.gz/1cfbdf4a7f68bfddddc7472b5799c7b950337b2a"
-  dependencies:
-    angular "1.x"
-    leaflet "0.7.x"
-
 "@bower_components/angular-table@samu/angular-table#master":
   version "1.0.4"
   resolved "https://codeload.github.com/samu/angular-table/tar.gz/9e213b9b76a8152a74dffc66ca46dabb0bb3db40"
@@ -165,7 +158,7 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular@1.x, angular@^1.0.8, angular@^1.4.8, angular@^1.6.2, angular@~1.2.9:
+angular@^1.0.8, angular@^1.4.8, angular@^1.6.2, angular@~1.2.9:
   version "1.7.6"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.6.tgz#db3bd96e3305c870f6227b9b32a4d761880473da"
 
@@ -2576,10 +2569,6 @@ lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
 
-leaflet@0.7.x:
-  version "0.7.7"
-  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-0.7.7.tgz#1e352ba54e63d076451fa363c900890cb2cf75ee"
-
 "less@2.6.x || ^2.7.1":
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/less/-/less-2.7.3.tgz#cc1260f51c900a9ec0d91fb6998139e02507b63b"
@@ -2731,8 +2720,8 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
 lodash.merge@^4.4.0:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
 
 lodash.once@^4.0.0:
   version "4.1.1"
